@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+:root {
+    --primary-color: #0F1111;
+    --secondary-color: #232f3e;
+    --background-color: #EAEDED;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: var(--primary-color);
+    height: 70px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .left {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60vw;
+}
+
+nav .left .logo img {
+    width: 12rem;
+    cursor: pointer;
+}
+
+nav .left input {
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 15px;
+    padding-right: 30px;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    background-color: var(--background-color);
+}
+
+nav .left input::placeholder {
+    font-size: 1rem;
+}
+
+nav .left .search,
+nav .left .search-2{
+    position: relative;
+}
+
+nav .left .search .search-icon {
+    position: absolute;
+    color: var(--primary-color);
+    height: 100%;
+    right: 2px;
+    width: 30px;
+    top: 0px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .right {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2vw;
+    margin-right: 5vw;
+    width: 40vw;
+}
+
+nav .right .cart {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    position: relative;
+}
+
+nav .right .cart *,
+nav .right .wishlist * {
+    color: white;
+}
+
+.number-cart-items {
+    position: absolute;
+    top: -5px;
+    left: 5px;
+    color: white;
+}
+
+nav .right .wishlist {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    position: relative;
+}
+
+nav .right .login {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0px;
+    border-radius: 20px;
+}
+
+nav .right .login a {
+    text-decoration: none;
+}
+
+nav .right .login p {
+    display: block;
+}
+
+.search-2 {
+    position: relative;
+    margin: 5px;
+    display: none;
+}
+
+.search-2 input {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    padding-right: 40px;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+input::placeholder {
+    font-size: 1rem;
+}
+
+.search-2 .search-icon {
+    position: absolute;
+    color: var(--primary-color);
+    height: 100%;
+    width: 40px;
+    padding: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    right: 0px;
+    top: 0px;
+    border-radius: 0px 20px 20px 0px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 5px;
+    position: sticky;
+    top: -5px;
+    z-index: 2;
+}
+
+.categories a {
+    text-decoration: none;
+    color: white;
+}
+
+.categories ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.categories ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid transparent;
+
+}
+
+.categories ul li:hover {
+    border: 1px solid white;
+}
+
+
+.css-137ul40-MuiButtonBase-root-MuiIconButton-root {
+    margin-left: 0px !important;
+}
+
+
+
+
+
+
+
+/* Media Query  */
+
+@media screen and (max-width: 800px) {
+    html {
+        font-size: 14px;
+    }
+
+    nav .left .search {
+        display: flex;
+        align-items: center;
+    }
+
+    nav .left .search input {
+        width: 150px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav .left .search {
+        display: none;
+    }
+
+    .search-2 {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 12px;
+    }
+
+    nav .right .wishlist {
+        display: none;
+    }
+}

@@ -1,0 +1,28 @@
+.main-customer-support {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.service-card {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.service-card div {
+    min-height: 200px;
+    min-width: 200px;
+    background-color: white;
+    box-shadow: 2px 2px 20px -15px black;
+}
+
+.main-customer-support .heading {
+    padding-top: 40px;
+}

@@ -1,0 +1,74 @@
+.all-products {
+    width: 100vw;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.all-products a {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
+
+.css-1to51ap-MuiBadge-root .MuiBadge-badge {
+    background-color: var(--tag-color);
+}
+
+.google button,
+.facebook button {
+    display: flex;
+    gap: 5px;
+}
+
+.apiLoading {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.apiLoading p {
+    font-size: 1.4rem;
+}
+
+@media screen and (max-width:700px) {
+    .ind-product {
+        width: 200px;
+        min-height: 300px;
+    }
+
+    .ind-product img {
+        height: 10rem;
+    }
+
+    .all-products {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .all-products {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 5px;
+    }
+
+    .ind-product {
+        width: 45vw;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .ind-product {
+        width: 170px;
+        min-height: 300px;
+    }
+}

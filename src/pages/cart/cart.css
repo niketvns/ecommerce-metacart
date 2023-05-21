@@ -1,0 +1,46 @@
+.cart-main {
+    width: 100vw;
+    min-height: 80vh;
+}
+
+.cart-login-main {
+    width: 100vw;
+    min-height: 80vh;
+    background-image: url('../../images/cart-bg.svg');
+    background-size: 70% 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.empty-cart {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.empty-cart img {
+    width: 20%;
+}
+
+.empty-cart p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.login-btn {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-btn a {
+    text-decoration: none;
+}

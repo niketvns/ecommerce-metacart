@@ -1,0 +1,17 @@
+.my-account-login {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    min-height: 60vh;
+    margin-top: 5rem;
+    font-size: 1.5rem;
+    align-items: center;
+    background-image: url('../../images/my-account-bg.svg');
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+}
+
+.my-account-login a {
+    text-decoration: none;
+}

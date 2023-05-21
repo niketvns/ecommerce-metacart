@@ -1,0 +1,138 @@
+:root {
+    --primary-color: #0F1111;
+    --secondary-color: #232f3e;
+    --background-color: #EAEDED;
+}
+
+
+.main-menu {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 100%;
+}
+
+.left-menu {
+    background-color: var(--background-color);
+    width: 300px;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.left-menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.left-menu::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.left-menu::-webkit-scrollbar-thumb {
+    background-color: #75889f;
+    border-radius: 20px;
+}
+
+.left-menu::-webkit-scrollbar-thumb:hover {
+    background-color: #4a5b6f;
+}
+
+.left-menu .close-menu {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.left-menu .close-menu * {
+    font-size: 2rem;
+}
+
+.user-welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 1.3rem;
+}
+
+.menu-items .order-details,
+.menu-items .payments {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    padding: 20px 0px;
+}
+
+.menu-items .my-account {
+    padding: 20px 0px;
+}
+
+.menu-items .order-details h2,
+.menu-items .payments h2,
+.menu-items .my-account h2 {
+    margin: 10px 5px 10px 30px;
+}
+
+.menu-items .order-details ul,
+.menu-items .payments ul,
+.menu-items .my-account ul {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    list-style: none;
+}
+
+.menu-items .order-details ul a,
+.menu-items .payments ul a,
+.menu-items .my-account ul a {
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.menu-items .order-details ul li,
+.menu-items .payments ul li,
+.menu-items .my-account ul li {
+    padding: 10px;
+    cursor: pointer;
+    padding-left: 30px;
+    font-size: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-items .order-details ul li:hover,
+.menu-items .payments ul li:hover,
+.menu-items .my-account ul li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.right-menu {
+    /* background-color: red; */
+    height: 100vh;
+}
+
+
+@media screen and (max-width:600px) {
+    .left-menu {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .left-menu {
+        width: 200px;
+    }
+}

@@ -44,3 +44,24 @@ export const getCategoryHandler = function (schema, request) {
     );
   }
 };
+
+/**
+ * This handler handles get all product of a category
+ * send GET Request at /api/catogory/:categoryname
+ * */
+
+export const getCategoryProductHandler = function (schema, request) {
+  const categoryName = request.params.categoryname;
+  try {
+    const productOfCategory = schema.db._collections[0]._records.filter((product)=> product.category === categoryName );
+    return new Response(200, {}, { products: productOfCategory });
+  } catch (error) {
+    return new Response(
+        500,
+        {},
+        {
+          error,
+        }
+    );
+  }
+};

@@ -8,20 +8,74 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "fiction",
+    categoryName: "mens-clothing",
     description:
       "literature in the form of prose, especially novels, that describes imaginary events and people",
   },
   {
     _id: uuid(),
-    categoryName: "non-fiction",
+    categoryName: "tops",
     description:
       "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
   },
   {
     _id: uuid(),
-    categoryName: "horror",
+    categoryName: "home-decoration",
     description:
       "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
   },
+  {
+    _id: uuid(),
+    categoryName: "womens-saaree",
+    description:
+        "literature in the form of prose, especially novels, that describes imaginary events and people",
+  },
+  // {
+  //   _id: uuid(),
+  //   categoryName: "sunglasses",
+  //   description:
+  //       "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+  // },
+  {
+    _id: uuid(),
+    categoryName: "womens-jewellery",
+    description:
+        "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+  },
+  {
+    _id: uuid(),
+    categoryName: "womens-shoes",
+    description:
+        "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+  },
+  {
+    _id: uuid(),
+    categoryName: "womens-watches",
+    description:
+        "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+  },
+  {
+    _id: uuid(),
+    categoryName: "mens-watches",
+    description:
+        "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+  },
+  {
+    _id: uuid(),
+    categoryName: "mens-shoes",
+    description:
+        "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+  },
+  // {
+  //   _id: uuid(),
+  //   categoryName: "skincare",
+  //   description:
+  //       "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+  // },
+  // {
+  //   _id: uuid(),
+  //   categoryName: "groceries",
+  //   description:
+  //       "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+  // },
 ];

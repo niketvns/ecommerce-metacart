@@ -1,0 +1,24 @@
+.succes-cont {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 1.5rem;
+}
+
+.succes-cont img {
+    width: 100px;
+    animation: greenTickAnimate 2s;
+}
+
+@keyframes greenTickAnimate {
+    0% {
+        width: 0px;
+    }
+
+    90% {
+        width: 100px;
+    }
+}
