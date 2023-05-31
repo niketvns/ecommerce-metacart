@@ -1,4 +1,4 @@
-import React, {createContext, useContext, useState} from 'react';
+import React, {createContext, useContext, useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import {useGlobalAuth} from "./authContext";
@@ -8,12 +8,30 @@ import axios from "axios";
 const wishlistContext = createContext();
 
 const WishlistProvider = ({children}) => {
-
     const [wishlistArray, setWishlistaArray] = useState([]);
-
     const {notifyWarn, notifySuccess, notifyError} = useNotifyAlert()
-
     const navigate = useNavigate();
+    const {loginToken} = useGlobalAuth()
+
+    useEffect(() => {
+        if (!loginToken) {
+            setWishlistaArray([])
+        } else {
+            fetchWishlistData();
+        }
+    }, [loginToken])
+
+    const fetchWishlistData = async () => {
+        const encodedToken = localStorage.getItem('encodedToken')
+        try {
+            const {data} = await axios.get(`/api/user/wishlist`, {
+                headers: {authorization: encodedToken}
+            })
+            setWishlistaArray(data.wishlist)
+        } catch (err) {
+            notifyError(err.message)
+        }
+    }
 
     const deleteFromWishlist = async (id) => {
         const encodedToken = localStorage.getItem('encodedToken')

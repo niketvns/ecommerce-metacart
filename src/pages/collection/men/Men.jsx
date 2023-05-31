@@ -17,6 +17,7 @@ export default function Men() {
             fetchProductsOfCategory(category)
         )
         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+        document.title = "Men's Products | Shopping with Metacart"
     }, [])
 
     return (
@@ -26,6 +27,7 @@ export default function Men() {
                     categoryProducts?.map((product) => {
                         return (
                             <ProductCard
+                                key={product._id}
                                 product={product}
                             />
                         )

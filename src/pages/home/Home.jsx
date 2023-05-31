@@ -18,6 +18,7 @@ export default function Home() {
     useEffect(() => {
         window.scrollTo({top: 0, left: 0});
         getAllCategories()
+        document.title = 'Home | Shopping with Metacart'
     }, [])
 
     const headerCarouselImages = [

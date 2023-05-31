@@ -1,4 +1,4 @@
-import React, {createContext, useContext, useState} from 'react';
+import React, {createContext, useContext, useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import {useGlobalAuth} from "./authContext";
@@ -8,21 +8,34 @@ import axios from "axios";
 const cartContext = createContext();
 
 const CartProvider = ({children}) => {
-
     const [cartArray, setCartArray] = useState([]);
-    const [totalPrice, setTotalPrice] = useState(0);
     const {notifyWarn, notifySuccess, notifyError} = useNotifyAlert()
     const navigate = useNavigate();
+    const {loginToken} = useGlobalAuth()
 
-    const calculateTotalPrice = (price) => {
-        setTotalPrice(totalPrice + price);
+    useEffect(()=>{
+        if(!loginToken) {
+            setCartArray([])
+        }else {
+            fetchCartData()
+        }
+
+    },[loginToken])
+
+    const calculateTotalPrice = () => {
+        return cartArray.reduce((acc, cur) => Math.floor(cur.price * cur.qty) + acc, 0)
     }
 
-    const checkObjInArray = (id) => {
-        if (cartArray.find((product) => product._id === id)) {
-            return true
+    const fetchCartData = async () =>{
+        const encodedToken = localStorage.getItem('encodedToken')
+        try {
+            const {data} = await axios.get(`/api/user/cart`, {
+                headers: {authorization: encodedToken}
+            })
+            setCartArray(data.cart)
+        } catch (err) {
+            notifyError(err.message)
         }
-        return false;
     }
 
     const deleteFromCart = async (id) => {
@@ -56,14 +69,23 @@ const CartProvider = ({children}) => {
         }
     }
 
+    const updateCart = async (id, cartAction) =>{
+        const encodedToken = localStorage.getItem('encodedToken')
+        try{
+            const { data } = await axios.post(`/api/user/cart/${id}`, { action: { type: cartAction }}, {headers: {authorization: encodedToken}})
+            setCartArray(data.cart)
+        }catch (err) {
+            notifyError(err.message)
+        }
+    }
+
     return (
         <cartContext.Provider value={{
             cartArray,
             deleteFromCart,
-            checkObjInArray,
             addToCart,
-            totalPrice,
-            calculateTotalPrice
+            calculateTotalPrice,
+            updateCart
         }}>
             {children}
         </cartContext.Provider>

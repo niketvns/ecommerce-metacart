@@ -17,6 +17,7 @@ export default function Cart() {
 
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0 });
+        document.title = 'Cart | Shopping with Metacart'
     }, [])
 
     return (

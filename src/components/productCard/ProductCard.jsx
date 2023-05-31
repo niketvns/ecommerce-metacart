@@ -2,15 +2,18 @@ import React, { useState } from 'react';
 import './productCard.css';
 import Rating from '@mui/material/Rating';
 import Button from '@mui/material/Button';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useGlobalCart } from '../../context/cartContext';
 import { useGlobalWishlist } from '../../context/wishlistContext';
+import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 export default function ProductCard({product}) {
-    const { addToCart, checkObjInArray } = useGlobalCart();
+    const [isCartBtnDisable, setIsCartBtnDisable] = useState(false)
+    const { addToCart, cartArray } = useGlobalCart();
     const { wishlistArray, addToWishlist, deleteFromWishlist } = useGlobalWishlist();
 
     const navigate = useNavigate();
@@ -43,14 +46,16 @@ export default function ProductCard({product}) {
 
                 <div className='btn'>
                     {
-                        checkObjInArray(product.id) ?
+                        cartArray.find(({_id}) => _id === product._id ) ?
                             <Button onClick={() => navigate('/cart')} variant="contained">
-                                <ShoppingCartIcon /> Go To Cart
+                                <ShoppingCartCheckoutIcon /> Go To Cart
                             </Button> :
-                            <Button onClick={() => addToCart(product)} variant="contained">
-                                <ShoppingCartIcon /> Add To Cart
+                            <Button onClick={() => {
+                                addToCart(product)
+                                setIsCartBtnDisable(true)
+                            }} variant="contained" disabled={isCartBtnDisable}>
+                                <AddShoppingCartIcon /> Add To Cart
                             </Button>
-
                     }
                 </div>
             </div>

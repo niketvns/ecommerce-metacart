@@ -11,6 +11,7 @@ export default function Signup() {
 
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0});
+        document.title = 'Signup | Metacart'
         if (loginToken) {
             navigate(-1)
         }

@@ -20,7 +20,8 @@ import {
     Beauty,
     Success,
     Wishlist,
-    CustomerSupport
+    CustomerSupport,
+    Checkout
 } from "./pages";
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
                 <Route path='/beauty' element={<Beauty/>}/>
                 <Route path='/product/:id' element={<SingleProduct/>}/>
                 <Route path='/user/profile' element={<Profile/>}/>
+                <Route path='/checkout' element={<Checkout/>}/>
                 <Route path='/success' element={<Success/>}/>
                 <Route path='/customer-support' element={<CustomerSupport/>}/>
                 <Route path='/testing/mockman' element={<Mockman/>}/>

@@ -11,6 +11,7 @@ export default function ForgetPassword() {
 
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0});
+        document.title = 'Recover Password | Metacart'
         if (loginToken) {
             navigate(-1)
         }

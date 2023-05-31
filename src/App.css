@@ -15,7 +15,3 @@ body {
   /*font-family: 'Source Sans Pro', sans-serif;*/
   font-family: 'Merienda', cursive;
 }
-
-body::-webkit-scrollbar {
-  width: 5px;
-}

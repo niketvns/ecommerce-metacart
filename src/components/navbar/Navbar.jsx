@@ -83,11 +83,8 @@ export default function Navbar() {
                         </div>
                     </NavLink>
                     <div className="search">
-                        <form onSubmit={setInputNull}>
-                            <input type="search" name="" id="" placeholder='Search Items' autoCorrect='off'
-                                   autoSave='on' autoComplete='on' onChange={inputSearch} value={input}/>
-                            {/*<button type='Submit' className='search-icon'><SearchIcon/></button>*/}
-                        </form>
+                        <input type="search" name="" id="" placeholder='Search Items' autoCorrect='off'
+                               autoSave='on' autoComplete='on' onChange={inputSearch} value={input}/>
                         <SearchModel searchInput={input} setInput={setInput}/>
                     </div>
                 </div>
@@ -126,11 +123,8 @@ export default function Navbar() {
                 </div>
             </nav>
             <div className="search-2">
-                <form onSubmit={setInputNull}>
-                    <input type="search" name="" id="" placeholder='Search Items' autoCorrect='off' autoSave='on'
-                           autoComplete='on' onChange={inputSearch} value={input}/>
-                    <button type='Submit' className='search-icon'><SearchIcon/></button>
-                </form>
+                <input type="search" name="" id="" placeholder='Search Items' autoCorrect='off' autoSave='on'
+                       autoComplete='on' onChange={inputSearch} value={input}/>
                 <SearchModel searchInput={input} setInput={setInput}/>
             </div>
             <div className="categories">

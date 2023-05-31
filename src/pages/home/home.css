@@ -9,17 +9,26 @@
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     background-color: var(--background-color);
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
-    width: 0px;
+    width: 10px;
+}
+body::-webkit-scrollbar-track{
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.2);
 }
 
-header {
-    padding: 20px 0px;
+body::-webkit-scrollbar-thumb{
+    background-color: var(--tag-color);
 }
+
+/*header {*/
+/*    padding: 20px 0px;*/
+/*}*/
 
 header img {
     width: 100vw;
@@ -34,7 +43,7 @@ header img {
 /* Best Deal  */
 
 header .best-deal {
-    width: 100vw;
+    width: 99vw;
     height: 50%;
     background: var(--background-color);
     display: flex;

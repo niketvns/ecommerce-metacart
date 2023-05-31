@@ -1,7 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './customerSupport.css';
 
 const CustomerSupport = () => {
+
+    useEffect(()=>{
+        window.scrollTo({top: 0, left: 0});
+        document.title = 'Customer Support | Metacart'
+    },[])
+
     return (
         <div className='main-customer-support'>
             <div className="heading">

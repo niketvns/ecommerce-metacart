@@ -17,6 +17,7 @@ export default function Wishlist() {
 
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        document.title = 'Wishlist | Shopping with Metacart'
     }, [])
 
     return (

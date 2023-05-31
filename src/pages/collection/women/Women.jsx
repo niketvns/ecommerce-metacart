@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import spinner from "../../../images/Spinner.svg";
 import axios from "axios";
-import {ProductCard} from "../../../components";
+import {Filter, ProductCard} from "../../../components";
+import './Women.css'
 
 export default function Women() {
     const [categoryProducts, setCategoryProducts] = useState([]);
@@ -16,23 +17,27 @@ export default function Women() {
         mensCategories.map((category) =>
             fetchProductsOfCategory(category)
         )
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+        window.scrollTo({top: 0, left: 0});
+        document.title = "Women's Products | Shopping with Metacart"
     }, [])
 
     return (
         categoryProducts.length !== 0 ?
+        <div className='womens-main'>
             <div className='all-products'>
                 {
                     categoryProducts?.map((product) => {
                         return (
                             <ProductCard
+                                key={product._id}
                                 product={product}
                             />
                         )
 
                     })
                 }
-            </div> :
+            </div>
+        </div> :
             <div className='apiLoading'>
                 <img src={spinner} alt=""/>
                 <p>Loading...</p>

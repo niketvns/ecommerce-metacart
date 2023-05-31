@@ -19,6 +19,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1px;
+    user-select: none;
 }
 
 .my-account-main .account .tabs div {
@@ -27,6 +28,10 @@
     background-color: var(--secondary-color);
     color: white;
     text-align: center;
+}
+
+.my-account-main .account .tabs .active-tab{
+    background-color: #0e529d;
 }
 
 .my-account-main .account .tabs div:hover{

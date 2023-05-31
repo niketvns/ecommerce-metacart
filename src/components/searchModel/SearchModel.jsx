@@ -31,7 +31,7 @@ const SearchModel = ({searchInput, setInput}) => {
                                 </div>
                             </Link>
                         )) :
-                        <p className='no-data-found'>no data found</p>
+                        <p className='no-data-found'>no product found</p>
                 }
             </div> : null
     );

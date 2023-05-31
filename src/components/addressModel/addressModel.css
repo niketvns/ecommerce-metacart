@@ -1,0 +1,42 @@
+.address-model-main{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.address-model-main form{
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    min-width: 400px;
+    border-radius: 5px;
+}
+
+.address-model-main form input{
+    min-height: 2rem;
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 0.5px solid rgba(0,0,0,0.5);
+}
+
+.address-model-main form .buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.address-model-main form .buttons button[type='button']{
+background-color: #c03535;
+}
+
+@media screen and (max-width: 500px) {
+    .address-model-main form{
+        min-width: 90%;
+    }
+}

@@ -17,6 +17,7 @@ import returnImg from '../../images/return.png';
 import {PayPal} from "../../components";
 import {useGlobalAuth} from "../../context/authContext";
 import {useNotifyAlert} from "../../context/notifyAlert";
+import {useGlobalWishlist} from "../../context/wishlistContext";
 
 const SingleProduct = () => {
     const [productDetails, setProductDetails] = useState(null);
@@ -25,15 +26,16 @@ const SingleProduct = () => {
     const [stockClass, setStockClass] = useState('green');
     const [fullImg, setFullImg] = useState()
     const [checkout, setCheckout] = useState(false)
-
-    const {addToCart, checkObjInArray} = useGlobalCart();
+    const {addToCart, cartArray} = useGlobalCart();
     const {loginToken} = useGlobalAuth();
+    const {addToWishlist, wishlistArray} = useGlobalWishlist()
     const {notifyError, notifyWarn} = useNotifyAlert()
     const navigate = useNavigate();
 
     useEffect(() => {
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-    }, [])
+        window.scrollTo({top: 0, left: 0});
+        document.title = productDetails ? productDetails.title.toUpperCase() : 'Product Details'
+    }, [productDetails])
 
     const {id} = useParams();
 
@@ -84,6 +86,7 @@ const SingleProduct = () => {
                                     productDetails?.images.map((img) => {
                                         return (
                                             <div
+                                                key={Math.random(10000)}
                                                 className="small-img"
                                                 onMouseOver={() => setFullImg(img)}
                                             >
@@ -166,7 +169,7 @@ const SingleProduct = () => {
                             </div>
                             <div className="btn">
                                 {
-                                    checkObjInArray(productDetails?._id) ?
+                                    cartArray.find(({_id}) => _id === productDetails._id ) ?
                                         <Button variant="contained" onClick={() => navigate('/cart')}>
                                             Go to Cart
                                         </Button> :
@@ -176,14 +179,14 @@ const SingleProduct = () => {
                                 }
 
                                 {
-                                    checkout ?
-                                        <PayPal payingAmount={productDetails?.price}/> :
-                                        <Button variant="contained" onClick={buyNow}>Buy Now</Button>
+                                    wishlistArray.find(({_id}) => _id === productDetails._id ) ?
+                                        <Button variant="outlined" onClick={() => navigate('/wishlist')}>
+                                            Go to Wishlist
+                                        </Button> :
+                                        <Button variant="outlined" onClick={() => addToWishlist(productDetails)}>
+                                            Add to Wishlist
+                                        </Button>
                                 }
-
-                                {/* <Button variant="contained">
-                                    Buy Now
-                                </Button> */}
                             </div>
                         </div>
                     </div>

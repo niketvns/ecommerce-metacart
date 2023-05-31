@@ -1,0 +1,73 @@
+.checkout-main{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px;
+    position: relative;
+}
+
+.checkout-main .left{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.checkout-main .left .addresses{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkout-main .left h2{
+    text-align: center;
+}
+
+.checkout-main .left .address{
+    border: 1px solid rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    min-width: 350px;
+}
+
+.checkout-main .left .add-address{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.checkout-main .left .address.selected{
+    background-color: #dcdcf5;
+}
+
+.checkout-main .right .total-amount{
+    margin-top: 100px;
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+    .checkout-main{
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .checkout-main .right .total-amount{
+        position: static;
+        margin-top: 0px;
+    }
+
+}
+
+@media screen and (max-width: 510px) {
+    .checkout-main .left .address{
+        width: 90vw;
+    }
+}

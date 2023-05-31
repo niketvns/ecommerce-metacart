@@ -9,17 +9,30 @@ const AuthProvider = ({children}) => {
 
     const [isLogin, setIsLogin] = useState(false);
     const [loginToken, setLoginToken] = useState('');
-    const [userDetails, setUserDetails] = useState([]);
+    const [userDetails, setUserDetails] = useState(null);
     const [input, setInput] = useState({
         email: '',
         password: ''
     });
+    const [userAddresses, setUserAddresses] = useState([
+        {
+            name: 'Niket Mishra',
+            street: '4109 Jerry Dove Drive',
+            city: 'Florence',
+            state: 'South Carolina',
+            country: 'United States',
+            pinCode: '29501',
+            phone: '843-433-5952'
+        }
+    ])
     const [deliveryAddress, setDeliveryAddress] = useState({
-        street: 'N 23/432 Sigra',
-        city: 'Varanasi',
-        state: 'Uttar Pradesh',
-        country: 'India',
-        pinCode: '224019'
+        name: 'Niket Mishra',
+        street: '4109 Jerry Dove Drive',
+        city: 'Florence',
+        state: 'South Carolina',
+        country: 'United States',
+        pinCode: '29501',
+        phone: '843-433-5952'
     })
     const {notifyInfo, notifyWarn, notifySuccess, notifyError} = useNotifyAlert()
 
@@ -81,6 +94,7 @@ const AuthProvider = ({children}) => {
         localStorage.removeItem("foundUser");
         setLoginToken('');
         notifySuccess('Logout Successfully');
+        setUserDetails(null);
     }
 
     return (
@@ -95,7 +109,9 @@ const AuthProvider = ({children}) => {
             setInput,
             dummyUserData,
             userDetails,
-            deliveryAddress
+            deliveryAddress,
+            userAddresses,
+            setUserAddresses
         }}>
             {children}
         </authContext.Provider>

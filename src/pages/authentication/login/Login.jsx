@@ -13,6 +13,7 @@ export default function Login() {
 
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0});
+        document.title = 'Login | Metacart';
         if (loginToken) {
             navigate(-1)
         }

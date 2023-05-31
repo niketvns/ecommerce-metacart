@@ -13,7 +13,7 @@ export const products = [
     description: "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
     discountPercentage: 6.18,
     rating: 4.43,
-    stock: 89,
+    stock: 3,
     brand: "Raymond",
     category: "mens-clothing",
     thumbnail: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",

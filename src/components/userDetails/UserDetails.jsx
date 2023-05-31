@@ -12,8 +12,8 @@ const UserDetails = ({userDetails}) => {
         <div className='my-account-main'>
             <div className='account'>
                 <div className="tabs">
-                    <div onClick={() => setActiveTab('profile')}>Profile</div>
-                    <div onClick={() => setActiveTab('address')}>Address</div>
+                    <div className={activeTab === 'profile' ? 'active-tab' : null} onClick={() => setActiveTab('profile')}>Profile</div>
+                    <div className={activeTab !== 'profile' ? 'active-tab' : null} onClick={() => setActiveTab('address')}>Address</div>
                 </div>
                 <div className="my-account-details">
                     {
