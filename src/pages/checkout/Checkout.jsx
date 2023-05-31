@@ -3,24 +3,24 @@ import './checkout.css'
 import {useGlobalAuth} from "../../context/authContext";
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import Button from "@mui/material/Button";
-import {AddressModel, PlaceOrder} from "../../components";
+import {AddressCard, AddressModel, PlaceOrder} from "../../components";
 import {useGlobalCart} from "../../context/cartContext";
 import {useNavigate} from "react-router-dom";
 
 const Checkout = () => {
     const [isAddressModel, setIsAddressModel] = useState(false)
-    const {userAddresses, deliveryAddress, userDetails} = useGlobalAuth()
+    const {userAddresses, selectDeliveryAddress} = useGlobalAuth()
     const {cartArray} = useGlobalCart()
 
     const navigate = useNavigate()
 
-    useEffect(()=>{
-        if(cartArray.length <= 0){
+    useEffect(() => {
+        if (cartArray.length <= 0) {
             navigate('/shop')
         }
         window.scrollTo({top: 0, left: 0});
         document.title = 'Checkout | Shopping with Metacart'
-    },[cartArray])
+    }, [cartArray])
 
     return (
         <div className='checkout-main'>
@@ -29,16 +29,13 @@ const Checkout = () => {
                 <div className='addresses'>
                     {
                         userAddresses.length !== 0 ?
-                            userAddresses.map((address)=>(
-                                <div className="address selected" key={address}>
-                                    <h3>{address?.name}</h3>
-                                    <p>{address?.street}, {address?.city}, {address?.state}, {address?.country}, {address?.pinCode}</p>
-                                    <p><b>Contact: </b> {address?.phone} </p>
-                                </div>
+                            userAddresses.map((address, index) => (
+                                <AddressCard address={address} key={address} selectDeliveryAddress={selectDeliveryAddress} index={index} setIsAddressModel={setIsAddressModel}/>
                             )) :
                             null
                     }
-                    <Button variant='contained' className="add-address" onClick={()=>setIsAddressModel(prev => !prev)}>
+                    <Button variant='contained' className="add-address"
+                            onClick={() => setIsAddressModel(prev => !prev)}>
                         <AddBoxIcon/> Add Delivery Address
                     </Button>
                 </div>
@@ -48,7 +45,7 @@ const Checkout = () => {
                     <PlaceOrder/>
                 </div>
             </div>
-            { isAddressModel &&  <AddressModel setIsAddressModel={setIsAddressModel}/>}
+            {isAddressModel && <AddressModel setIsAddressModel={setIsAddressModel}/>}
         </div>
     );
 };

@@ -8,7 +8,9 @@ import {useGlobalAuth} from "../../context/authContext";
 
 const CartDetails = () => {
     const {cartArray} = useGlobalCart();
-    const {deliveryAddress} = useGlobalAuth()
+    const {deliveryAddress, userAddresses} = useGlobalAuth()
+
+    const selectedAddress = userAddresses.find((address) => address.isSelected === true )
 
     return (
         <div className='cart-items-main'>
@@ -17,7 +19,7 @@ const CartDetails = () => {
                 <p>You Have {cartArray.length} Items in Shopping Cart</p>
             </div>
             <div className="delivery-location">
-                <p>Delivery to: <b>{`${deliveryAddress?.city} ${deliveryAddress?.pinCode}`}</b></p>
+                <p>Delivery to: <b>{`${selectedAddress?.city} ${selectedAddress?.pinCode}`}</b></p>
                 <Button variant="outlined">Change</Button>
             </div>
             <div className="cart-items-total">

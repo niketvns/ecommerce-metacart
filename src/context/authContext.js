@@ -16,25 +16,20 @@ const AuthProvider = ({children}) => {
     });
     const [userAddresses, setUserAddresses] = useState([
         {
-            name: 'Niket Mishra',
+            fullName: 'Niket Mishra',
             street: '4109 Jerry Dove Drive',
             city: 'Florence',
             state: 'South Carolina',
             country: 'United States',
             pinCode: '29501',
-            phone: '843-433-5952'
+            phone: '843-433-5952',
+            isSelected: false
         }
     ])
-    const [deliveryAddress, setDeliveryAddress] = useState({
-        name: 'Niket Mishra',
-        street: '4109 Jerry Dove Drive',
-        city: 'Florence',
-        state: 'South Carolina',
-        country: 'United States',
-        pinCode: '29501',
-        phone: '843-433-5952'
-    })
-    const {notifyInfo, notifyWarn, notifySuccess, notifyError} = useNotifyAlert()
+    const [isEditingAddress, setIsEditingAddress] = useState(false)
+    const [editableAddress, setEditableAddress] = useState({})
+
+    const { notifyWarn, notifySuccess, notifyError} = useNotifyAlert()
 
     useEffect(() => {
         let token = JSON.parse(localStorage.getItem("encodedToken"));
@@ -44,6 +39,24 @@ const AuthProvider = ({children}) => {
             setUserDetails(JSON.parse(localStorage.getItem('foundUser')))
         }
     }, [loginToken]);
+
+    const selectDeliveryAddress = (index) =>{
+        setUserAddresses(
+            userAddresses.map((address, ind) => ind === index ? {...address, isSelected: true} : {...address, isSelected: false} )
+        )
+    }
+
+    const deleteAddress = (index) => {
+        setUserAddresses(
+            userAddresses.filter((address, ind) => ind !== index && address )
+        )
+    }
+
+    const editDeliveryAddress = (index) => {
+        setIsEditingAddress(true)
+        setEditableAddress(userAddresses.find((address, ind) => ind === index));
+        deleteAddress(index)
+    }
 
     const userLogin = async () => {
         try {
@@ -109,9 +122,14 @@ const AuthProvider = ({children}) => {
             setInput,
             dummyUserData,
             userDetails,
-            deliveryAddress,
             userAddresses,
-            setUserAddresses
+            setUserAddresses,
+            selectDeliveryAddress,
+            deleteAddress,
+            editDeliveryAddress,
+            isEditingAddress,
+            setIsEditingAddress,
+            editableAddress
         }}>
             {children}
         </authContext.Provider>

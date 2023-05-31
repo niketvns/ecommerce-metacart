@@ -24,6 +24,14 @@ const Filter = ({filterShow}) => {
                         <input type="checkbox" id='womens'/>
                         Womens
                     </label>
+                    <label htmlFor="electronics">
+                        <input type="checkbox" id='electronics'/>
+                        Electronics
+                    </label>
+                    <label htmlFor="beauty">
+                        <input type="checkbox" id='beauty'/>
+                        Beauty
+                    </label>
                     <label htmlFor="home-groceries">
                         <input type="checkbox" id='home-groceries'/>
                         Home Groceries

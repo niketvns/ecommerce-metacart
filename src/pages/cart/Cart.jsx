@@ -10,9 +10,7 @@ import {useGlobalAuth} from "../../context/authContext";
 export default function Cart() {
 
     const { loginToken } = useGlobalAuth();
-
     const { cartArray } = useGlobalCart();
-
     const navigate = useNavigate();
 
     useEffect(() => {

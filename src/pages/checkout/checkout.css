@@ -23,13 +23,54 @@
     text-align: center;
 }
 
+.checkout-main .left .address-card-main{
+    position: relative;
+}
+
 .checkout-main .left .address{
     border: 1px solid rgba(0,0,0,0.5);
-    padding: 20px;
+    padding: 20px 30px;
     border-radius: 5px;
     cursor: pointer;
     background-color: white;
     min-width: 350px;
+    position: relative;
+}
+
+.checkout-main .left .address .selected-icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+}
+
+.checkout-main .left .address .selected-icon *{
+    font-size: 1rem;
+    color: green;
+}
+
+.checkout-main .left .address-card-main .edit-address-icon{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.checkout-main .left .address-card-main .delete-address-icon{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.checkout-main .left .address-card-main .edit-address-icon *{
+    font-size: 1.5rem;
+    color: green;
+    background-color: yellow;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.checkout-main .left .address h3{
+    text-transform: capitalize;
 }
 
 .checkout-main .left .add-address{
