@@ -4,7 +4,7 @@ import './App.css'
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Mockman from "mockman-js";
-import {Navbar, Footer} from './components';
+import {Navbar, Footer, BackToTop} from './components';
 import {
     Cart,
     Error,
@@ -51,6 +51,7 @@ function App() {
             </Routes>
             <Footer/>
             <ToastContainer/>
+            <BackToTop/>
         </>
     );
 }

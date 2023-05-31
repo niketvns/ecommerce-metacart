@@ -6,7 +6,9 @@ import {useGlobalAuth} from "../../context/authContext";
 const UserDetails = ({userDetails}) => {
 
     const [activeTab, setActiveTab] = useState('profile');
-    const {deliveryAddress} = useGlobalAuth()
+    const {userAddresses} = useGlobalAuth()
+
+    const deliveryAddress = userAddresses.find((address) => address.isSelected === true )
 
     return (
         <div className='my-account-main'>
@@ -24,11 +26,17 @@ const UserDetails = ({userDetails}) => {
                                 <p>Email: <b>{userDetails?.email}</b></p>
                             </div> :
                             <div className="address">
-                                <p>House No: <b>{deliveryAddress.street}</b></p>
-                                <p>City: <b>{deliveryAddress.city}</b></p>
-                                <p>State: <b>{deliveryAddress.state}</b></p>
-                                <p>Country: <b>{deliveryAddress.country}</b></p>
-                                <p>Pin Code: <b>{deliveryAddress.pinCode}</b></p>
+                                {
+                                    deliveryAddress ?
+                                        <>
+                                            <p>House No: <b>{deliveryAddress.street}</b></p>
+                                            <p>City: <b>{deliveryAddress.city}</b></p>
+                                            <p>State: <b>{deliveryAddress.state}</b></p>
+                                            <p>Country: <b>{deliveryAddress.country}</b></p>
+                                            <p>Pin Code: <b>{deliveryAddress.pinCode}</b></p>
+                                        </> :
+                                        <p>Address not available</p>
+                                }
                             </div>
                     }
                 </div>

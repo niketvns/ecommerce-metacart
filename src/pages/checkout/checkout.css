@@ -69,6 +69,13 @@
     padding: 2px;
 }
 
+.checkout-main .left .address-card-main .delete-address-icon *{
+    font-size: 1.5rem;
+    color: red;
+    padding: 2px;
+    cursor: pointer;
+}
+
 .checkout-main .left .address h3{
     text-transform: capitalize;
 }
@@ -110,5 +117,11 @@
 @media screen and (max-width: 510px) {
     .checkout-main .left .address{
         width: 90vw;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .checkout-main .left .address{
+        min-width: 90%;
     }
 }

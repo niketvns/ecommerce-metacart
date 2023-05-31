@@ -15,6 +15,21 @@
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
 }
 
+.place-order-main .product-details-shipping{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.place-order-main .product-details-shipping p{
+    max-width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
 .place-order-main div {
     display: flex;
     justify-content: space-between;

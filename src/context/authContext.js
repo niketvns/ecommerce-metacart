@@ -14,6 +14,13 @@ const AuthProvider = ({children}) => {
         email: '',
         password: ''
     });
+    const [signupInput, setSignupInput] = useState({
+        firstName: '',
+        lastName: '',
+        gender: '',
+        email: '',
+        password: ''
+    });
     const [userAddresses, setUserAddresses] = useState([
         {
             fullName: 'Niket Mishra',
@@ -22,8 +29,8 @@ const AuthProvider = ({children}) => {
             state: 'South Carolina',
             country: 'United States',
             pinCode: '29501',
-            phone: '843-433-5952',
-            isSelected: false
+            phone: '8434335952',
+            isSelected: true
         }
     ])
     const [isEditingAddress, setIsEditingAddress] = useState(false)
@@ -110,6 +117,45 @@ const AuthProvider = ({children}) => {
         setUserDetails(null);
     }
 
+    const userSignUp = async () => {
+        try {
+            let {data, status} = await axios.post('/api/auth/signup', {
+                "firstName": signupInput.firstName,
+                "lastName": signupInput.lastName,
+                "gender": signupInput.gender,
+                "email": signupInput.email,
+                "password": signupInput.password
+            })
+            if(status === 201){
+                localStorage.setItem("encodedToken", JSON.stringify(data.encodedToken));
+                localStorage.setItem("foundUser", JSON.stringify(data.createdUser));
+                setLoginToken(data.encodedToken);
+                setUserDetails(data.createdUser);
+                notifySuccess('Signup Successfully');
+            }
+        } catch (err) {
+            notifyError('Signup Error:' + err.message);
+        }
+    };
+
+    const signupHandler = (event) => {
+        event.preventDefault();
+        if (signupInput.email && signupInput.password && signupInput.firstName && signupInput.lastName && signupInput.gender) {
+            userSignUp();
+            setSignupInput(
+                {
+                    firstName: '',
+                    lastName: '',
+                    gender: '',
+                    email: '',
+                    password: ''
+                }
+            )
+        } else {
+            notifyWarn('Enter User Details');
+        }
+    };
+
     return (
         <authContext.Provider value={{
             isLogin,
@@ -118,6 +164,9 @@ const AuthProvider = ({children}) => {
             setLoginToken,
             loginAction,
             logoutAction,
+            signupHandler,
+            signupInput,
+            setSignupInput,
             input,
             setInput,
             dummyUserData,

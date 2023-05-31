@@ -4,9 +4,7 @@ import {NavLink, useNavigate} from 'react-router-dom';
 import {useGlobalAuth} from "../../../context/authContext";
 
 export default function Signup() {
-
-    const { loginToken } = useGlobalAuth();
-
+    const { loginToken, signupHandler, signupInput, setSignupInput } = useGlobalAuth();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -17,24 +15,30 @@ export default function Signup() {
         }
     }, [loginToken]);
 
+    const inputHandler = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        setSignupInput(prev => ({...prev, [name]: value}))
+    }
+
     return (
         <>
             <div className="sign-up">
                 <div className="signup-card">
                     <h2>SignUp</h2>
-                    <form className='form-content'>
+                    <form className='form-content' onSubmit={signupHandler}>
                         <div className="inputs">
                             <div className="input-item">
                                 <label htmlFor="">
                                     First Name
                                 </label>
-                                <input required type='email' placeholder='John'/>
+                                <input required value={signupInput.firstName} onChange={inputHandler} type='text' name={'firstName'} placeholder='John'/>
                             </div>
                             <div className="input-item">
                                 <label htmlFor="">
                                     Last Name
                                 </label>
-                                <input required type='email' placeholder='Doe'/>
+                                <input required value={signupInput.lastName} onChange={inputHandler} type='text' name={'lastName'} placeholder='Doe'/>
                             </div>
                             <div className="input-item">
                                 <label htmlFor="">
@@ -42,15 +46,15 @@ export default function Signup() {
                                 </label>
                                 <div className="inputs-radio-gender">
                                     <label>
-                                        <input required type='radio' name='gender'/>
+                                        <input required onChange={inputHandler} value={'Male'} type='radio' name='gender'/>
                                         Male
                                     </label>
                                     <label>
-                                        <input required type='radio' name='gender'/>
+                                        <input required onChange={inputHandler} value={'Female'} type='radio' name='gender'/>
                                         Female
                                     </label>
                                     <label>
-                                        <input required type='radio' name='gender'/>
+                                        <input required onChange={inputHandler} value={'Other'} type='radio' name='gender'/>
                                         Other
                                     </label>
                                 </div>
@@ -59,17 +63,17 @@ export default function Signup() {
                                 <label htmlFor="">
                                     Email Address
                                 </label>
-                                <input required type='email' placeholder='johndoe@email.com'/>
+                                <input required value={signupInput.email} onChange={inputHandler} type='email' name={'email'} placeholder='johndoe@email.com'/>
                             </div>
                             <div className="input-item">
                                 <label htmlFor="">
                                     Password
                                 </label>
-                                <input required type='password' placeholder='*********'/>
+                                <input required value={signupInput.password} onChange={inputHandler} type='password' name={'password'} placeholder='*********'/>
                             </div>
                         </div>
                         <label className="accept-terms">
-                            <input type='checkbox'/>
+                            <input required type='checkbox'/>
                             I Accept all Terms & Condition
                         </label>
                         <button type="submit">

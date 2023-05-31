@@ -193,7 +193,8 @@ input::placeholder {
 
 }
 
-.categories ul li:hover {
+.categories ul li:hover,
+.categories a.active{
     border: 1px solid white;
 }
 
@@ -233,6 +234,11 @@ input::placeholder {
 }
 
 @media screen and (max-width: 500px) {
+
+    nav{
+        height: auto;
+    }
+
     nav .left .search {
         display: none;
     }

@@ -7,20 +7,36 @@
     gap: 20px;
 }
 
-.service-card {
+.service-cards {
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 30px;
+    padding: 40px 10px;
 }
 
-.service-card div {
-    min-height: 200px;
-    min-width: 200px;
+.service-cards div {
     background-color: white;
     box-shadow: 2px 2px 20px -15px black;
+    padding: 20px 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-cards div:hover{
+    box-shadow: 5px 5px 25px -10px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.service-cards div img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
 }
 
 .main-customer-support .heading {

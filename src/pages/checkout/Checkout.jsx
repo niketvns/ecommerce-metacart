@@ -25,7 +25,7 @@ const Checkout = () => {
     return (
         <div className='checkout-main'>
             <div className="left">
-                <h2>Delivery Address</h2>
+                <h2>Choose Delivery Address</h2>
                 <div className='addresses'>
                     {
                         userAddresses.length !== 0 ?

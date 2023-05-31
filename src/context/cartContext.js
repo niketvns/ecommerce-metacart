@@ -23,7 +23,7 @@ const CartProvider = ({children}) => {
     },[loginToken])
 
     const calculateTotalPrice = () => {
-        return cartArray.reduce((acc, cur) => Math.floor(cur.price * cur.qty) + acc, 0)
+        return cartArray.reduce((acc, cur) => (Math.floor(cur.price) * cur.qty) + acc, 0)
     }
 
     const fetchCartData = async () =>{
