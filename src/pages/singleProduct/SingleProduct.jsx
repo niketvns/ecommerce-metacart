@@ -83,6 +83,7 @@ const SingleProduct = () => {
                         <div className="image-section">
                             <div className="image-selector">
                                 {
+                                    productDetails.images &&
                                     productDetails?.images.map((img) => {
                                         return (
                                             <div

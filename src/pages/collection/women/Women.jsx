@@ -23,7 +23,6 @@ export default function Women() {
 
     return (
         categoryProducts.length !== 0 ?
-        <div className='womens-main'>
             <div className='all-products'>
                 {
                     categoryProducts?.map((product) => {
@@ -36,8 +35,7 @@ export default function Women() {
 
                     })
                 }
-            </div>
-        </div> :
+            </div> :
             <div className='apiLoading'>
                 <img src={spinner} alt=""/>
                 <p>Loading...</p>

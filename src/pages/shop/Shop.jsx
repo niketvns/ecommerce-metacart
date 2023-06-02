@@ -9,7 +9,7 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 
 export default function Shop() {
     const [filterShow, setFilterShow] = useState(false)
-    const {products, isLoading} = useGlobalProduct();
+    const {isLoading, filteredProducts} = useGlobalProduct();
 
     useEffect(() => {
         window.scrollTo({top: 0, left: 0});
@@ -26,13 +26,15 @@ export default function Shop() {
                     <Filter filterShow={filterShow}/>
                     <div className='all-products'>
                         {
-                            products.map((product) => (
+                            filteredProducts.length ?
+                            filteredProducts.map((product) => (
                                     <ProductCard
                                         key={product._id}
                                         product={product}
                                     />
                                 )
-                            )
+                            ) :
+                                <h3>No Product Found</h3>
                         }
                     </div>
                 </div>

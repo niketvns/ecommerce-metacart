@@ -12,10 +12,11 @@ export const products = [
     price: 109.95,
     description: "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
     discountPercentage: 6.18,
-    rating: 4.43,
+    rating: 4.2,
     stock: 3,
     brand: "Raymond",
     category: "mens-clothing",
+    usedFor: 'mens',
     thumbnail: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/6/1.png",
@@ -30,17 +31,12 @@ export const products = [
     price: 22.3,
     description: "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
     discountPercentage: 6.18,
-    rating: 4.43,
-    stock: 89,
+    rating: 3.9,
+    stock: 15,
     brand: "HP Pavilion",
     category: "mens-clothing",
+    usedFor: 'mens',
     thumbnail: "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-    images: [
-      "https://i.dummyjson.com/data/products/6/1.png",
-      "https://i.dummyjson.com/data/products/6/2.jpg",
-      "https://i.dummyjson.com/data/products/6/3.png",
-      "https://i.dummyjson.com/data/products/6/4.jpg"
-    ]
   },
   {
     _id: uuid(),
@@ -48,10 +44,11 @@ export const products = [
     price: 55.99,
     description: "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
     discountPercentage: 6.18,
-    rating: 4.43,
-    stock: 89,
+    rating: 3.5,
+    stock: 9,
     brand: "HP Pavilion",
     category: "mens-clothing",
+    usedFor: 'mens',
     thumbnail: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/6/1.png",
@@ -66,10 +63,11 @@ export const products = [
     price: 15.99,
     description: "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
     discountPercentage: 6.18,
-    rating: 4.43,
-    stock: 89,
+    rating: 4.2,
+    stock: 8,
     brand: "HP Pavilion",
     category: "mens-clothing",
+    usedFor: 'mens',
     thumbnail: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/6/1.png",
@@ -84,10 +82,11 @@ export const products = [
     price: 695,
     description: "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
     discountPercentage: 6.18,
-    rating: 4.43,
-    stock: 89,
+    rating: 3.2,
+    stock: 19,
     brand: "HP Pavilion",
     category: "womens-jewellery",
+    usedFor: 'womens',
     thumbnail: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/6/1.png",
@@ -102,10 +101,11 @@ export const products = [
     price: 168,
     description: "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
     discountPercentage: 6.18,
-    rating: 4.43,
-    stock: 89,
+    rating: 3.9,
+    stock: 23,
     brand: "HP Pavilion",
     category: "womens-jewellery",
+    usedFor: 'womens',
     thumbnail: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/6/1.png",
@@ -120,10 +120,11 @@ export const products = [
     price: 9.99,
     description: "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
     discountPercentage: 6.18,
-    rating: 4.43,
-    stock: 89,
+    rating: 4.2,
+    stock: 48,
     brand: "HP Pavilion",
     category: "womens-jewellery",
+    usedFor: 'womens',
     thumbnail: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/6/1.png",
@@ -142,6 +143,7 @@ export const products = [
     stock: 89,
     brand: "HP Pavilion",
     category: "womens-jewellery",
+    usedFor: 'womens',
     thumbnail: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/6/1.png",
@@ -156,10 +158,11 @@ export const products = [
     price: 64,
     description: "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
     discountPercentage: 6.18,
-    rating: 4.43,
-    stock: 89,
+    rating: 3.4,
+    stock: 19,
     brand: "HP Pavilion",
     category: "electronics",
+    usedFor: 'electronics',
     thumbnail: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/6/1.png",
@@ -174,10 +177,11 @@ export const products = [
     price: 109,
     description: "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
     discountPercentage: 6.18,
-    rating: 4.43,
-    stock: 89,
+    rating: 4.1,
+    stock: 27,
     brand: "HP Pavilion",
     category: "electronics",
+    usedFor: 'electronics',
     thumbnail: "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/6/1.png",
@@ -192,10 +196,11 @@ export const products = [
     price: 109,
     description: "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
     discountPercentage: 6.18,
-    rating: 4.43,
-    stock: 89,
+    rating: 3.5,
+    stock: 29,
     brand: "HP Pavilion",
     category: "electronics",
+    usedFor: 'electronics',
     thumbnail: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/6/1.png",
@@ -210,10 +215,11 @@ export const products = [
     price: 114,
     description: "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
     discountPercentage: 6.18,
-    rating: 4.43,
-    stock: 89,
+    rating: 4.4,
+    stock: 13,
     brand: "HP Pavilion",
     category: "electronics",
+    usedFor: 'electronics',
     thumbnail: "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/6/1.png",
@@ -232,6 +238,7 @@ export const products = [
     stock: 89,
     brand: "HP Pavilion",
     category: "electronics",
+    usedFor: 'electronics',
     thumbnail: "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/6/1.png",
@@ -250,6 +257,7 @@ export const products = [
     stock: 89,
     brand: "HP Pavilion",
     category: "electronics",
+    usedFor: 'electronics',
     thumbnail: "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/6/1.png",
@@ -268,6 +276,7 @@ export const products = [
     stock: 89,
     brand: "HP Pavilion",
     category: "womens-clothing",
+    usedFor: 'womens',
     thumbnail: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/6/1.png",
@@ -286,6 +295,7 @@ export const products = [
     stock: 89,
     brand: "HP Pavilion",
     category: "womens-clothing",
+    usedFor: 'womens',
     thumbnail: "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/6/1.png",
@@ -304,6 +314,7 @@ export const products = [
     stock: 89,
     brand: "HP Pavilion",
     category: "womens-clothing",
+    usedFor: 'womens',
     thumbnail: "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
     images: [
       "https://i.dummyjson.com/data/products/6/1.png",
@@ -322,6 +333,7 @@ export const products = [
     stock: 89,
     brand: "HP Pavilion",
     category: "womens-clothing",
+    usedFor: 'womens',
     thumbnail: "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/6/1.png",
@@ -340,6 +352,7 @@ export const products = [
     stock: 89,
     brand: "HP Pavilion",
     category: "womens-clothing",
+    usedFor: 'womens',
     thumbnail: "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/6/1.png",
@@ -352,12 +365,13 @@ export const products = [
     _id: uuid(),
     title: "DANVOUY Womens T Shirt Casual Cotton Short",
     price: 12.99,
-    description: "95% Cotton, 5% Spandex, Features: Casual, Short Sleeve, Letter Print, V-Neck, Fashion Tees, The fabric is soft and has some stretch, Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+    description: "95% Cotton, 5% Spandex, Features: Casual, Short Sleeve, Letter Print, V-Neck, Fashion Tees, The fabric is soft and has some stretch. Season: Spring, Summer, Autumn, Winter.",
     discountPercentage: 6.18,
     rating: 4.43,
     stock: 89,
     brand: "HP Pavilion",
     category: "womens-clothing",
+    usedFor: 'womens',
     thumbnail: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/6/1.png",
@@ -376,6 +390,7 @@ export const products = [
     stock: 94,
     brand: "Apple",
     category: "smartphones",
+    usedFor: 'electronics',
     thumbnail: "https://i.dummyjson.com/data/products/1/3.jpg",
     images: [
       "https://i.dummyjson.com/data/products/1/3.jpg",
@@ -395,6 +410,7 @@ export const products = [
     stock: 34,
     brand: "Apple",
     category: "smartphones",
+    usedFor: 'electronics',
     thumbnail: "https://i.dummyjson.com/data/products/2/1.jpg",
     images: [
       "https://i.dummyjson.com/data/products/2/1.jpg",
@@ -413,6 +429,7 @@ export const products = [
     stock: 36,
     brand: "Samsung",
     category: "smartphones",
+    usedFor: 'electronics',
     thumbnail: "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/3/1.jpg"
@@ -424,10 +441,11 @@ export const products = [
     description: "OPPO F19 is officially announced on April 2021.",
     price: 280,
     discountPercentage: 17.91,
-    rating: 4.3,
+    rating: 3.7,
     stock: 123,
     brand: "OPPO",
     category: "smartphones",
+    usedFor: 'electronics',
     thumbnail: "https://i.dummyjson.com/data/products/4/2.jpg",
     images: [
       "https://i.dummyjson.com/data/products/4/1.jpg",
@@ -447,6 +465,7 @@ export const products = [
     stock: 32,
     brand: "Huawei",
     category: "smartphones",
+    usedFor: 'electronics',
     thumbnail: "https://i.dummyjson.com/data/products/5/3.jpg",
     images: [
       "https://i.dummyjson.com/data/products/5/1.jpg",
@@ -464,6 +483,7 @@ export const products = [
     stock: 83,
     brand: "Apple",
     category: "laptops",
+    usedFor: 'electronics',
     thumbnail: "https://i.postimg.cc/yddH62tW/mac-1.jpg",
     images: [
       'https://i.postimg.cc/yddH62tW/mac-1.jpg',
@@ -484,6 +504,7 @@ export const products = [
     stock: 50,
     brand: "Samsung",
     category: "laptops",
+    usedFor: 'electronics',
     thumbnail: "https://i.postimg.cc/T3z03bsb/asus-1.jpg",
     images: [
       'https://i.postimg.cc/T3z03bsb/asus-1.jpg',
@@ -504,6 +525,7 @@ export const products = [
     stock: 68,
     brand: "Microsoft Surface",
     category: "laptops",
+    usedFor: 'electronics',
     thumbnail: "https://i.postimg.cc/6QThc0GF/dell-1.webp",
     images: [
       'https://i.postimg.cc/6QThc0GF/dell-1.webp',
@@ -524,6 +546,7 @@ export const products = [
     stock: 96,
     brand: "Infinix",
     category: "laptops",
+    usedFor: 'electronics',
     thumbnail: "https://m.media-amazon.com/images/I/51DlM6OUjiL._SX679_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/9/1.jpg",
@@ -543,6 +566,7 @@ export const products = [
     stock: 89,
     brand: "HP Pavilion",
     category: "laptops",
+    usedFor: 'electronics',
     thumbnail: "https://i.dummyjson.com/data/products/10/thumbnail.jpeg",
     images: [
       "https://i.dummyjson.com/data/products/10/1.jpg",
@@ -561,6 +585,7 @@ export const products = [
     stock: 65,
     brand: "Impression of Acqua Di Gio",
     category: "fragrances",
+    usedFor: 'beauty',
     thumbnail: "https://i.dummyjson.com/data/products/11/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/11/1.jpg",
@@ -579,6 +604,7 @@ export const products = [
     stock: 52,
     brand: "Royal_Mirage",
     category: "fragrances",
+    usedFor: 'beauty',
     thumbnail: "https://i.dummyjson.com/data/products/12/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/12/1.jpg",
@@ -598,6 +624,7 @@ export const products = [
     stock: 61,
     brand: "Fog Scent Xpressio",
     category: "fragrances",
+    usedFor: 'beauty',
     thumbnail: "https://i.dummyjson.com/data/products/13/thumbnail.webp",
     images: [
       "https://i.dummyjson.com/data/products/13/1.jpg",
@@ -617,6 +644,7 @@ export const products = [
     stock: 114,
     brand: "Al Munakh",
     category: "fragrances",
+    usedFor: 'beauty',
     thumbnail: "https://i.dummyjson.com/data/products/14/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/14/1.jpg",
@@ -635,6 +663,7 @@ export const products = [
     stock: 105,
     brand: "Lord - Al-Rehab",
     category: "fragrances",
+    usedFor: 'beauty',
     thumbnail: "https://i.dummyjson.com/data/products/15/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/15/1.jpg",
@@ -654,6 +683,7 @@ export const products = [
     stock: 110,
     brand: "L'Oreal Paris",
     category: "skincare",
+    usedFor: 'beauty',
     thumbnail: "https://i.dummyjson.com/data/products/16/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/16/1.png",
@@ -673,6 +703,7 @@ export const products = [
     stock: 78,
     brand: "Hemani Tea",
     category: "skincare",
+    usedFor: 'beauty',
     thumbnail: "https://i.dummyjson.com/data/products/17/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/17/1.jpg",
@@ -691,6 +722,7 @@ export const products = [
     stock: 88,
     brand: "Dermive",
     category: "skincare",
+    usedFor: 'beauty',
     thumbnail: "https://i.dummyjson.com/data/products/18/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/18/1.jpg",
@@ -710,6 +742,7 @@ export const products = [
     stock: 54,
     brand: "ROREC White Rice",
     category: "skincare",
+    usedFor: 'beauty',
     thumbnail: "https://i.dummyjson.com/data/products/19/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/19/1.jpg",
@@ -728,6 +761,7 @@ export const products = [
     stock: 140,
     brand: "Fair & Clear",
     category: "skincare",
+    usedFor: 'beauty',
     thumbnail: "https://i.dummyjson.com/data/products/20/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/20/1.jpg",
@@ -747,6 +781,7 @@ export const products = [
     stock: 133,
     brand: "Saaf & Khaas",
     category: "groceries",
+    usedFor: 'home',
     thumbnail: "https://i.dummyjson.com/data/products/21/thumbnail.png",
     images: [
       "https://i.dummyjson.com/data/products/21/1.png",
@@ -764,6 +799,7 @@ export const products = [
     stock: 146,
     brand: "Bake Parlor Big",
     category: "groceries",
+    usedFor: 'home',
     thumbnail: "https://i.dummyjson.com/data/products/22/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/22/1.jpg",
@@ -781,6 +817,7 @@ export const products = [
     stock: 26,
     brand: "Baking Food Items",
     category: "groceries",
+    usedFor: 'home',
     thumbnail: "https://i.dummyjson.com/data/products/23/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/23/1.jpg",
@@ -800,6 +837,7 @@ export const products = [
     stock: 113,
     brand: "fauji",
     category: "groceries",
+    usedFor: 'home',
     thumbnail: "https://i.dummyjson.com/data/products/24/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/24/1.jpg",
@@ -819,6 +857,7 @@ export const products = [
     stock: 47,
     brand: "Dry Rose",
     category: "groceries",
+    usedFor: 'home',
     thumbnail: "https://i.dummyjson.com/data/products/25/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/25/1.png",
@@ -838,6 +877,7 @@ export const products = [
     stock: 131,
     brand: "Boho Decor",
     category: "home-decoration",
+    usedFor: 'home',
     thumbnail: "https://i.dummyjson.com/data/products/26/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/26/1.jpg",
@@ -858,6 +898,7 @@ export const products = [
     stock: 17,
     brand: "Flying Wooden",
     category: "home-decoration",
+    usedFor: 'home',
     thumbnail: "https://i.dummyjson.com/data/products/27/thumbnail.webp",
     images: [
       "https://i.dummyjson.com/data/products/27/1.jpg",
@@ -877,6 +918,7 @@ export const products = [
     stock: 54,
     brand: "LED Lights",
     category: "home-decoration",
+    usedFor: 'home',
     thumbnail: "https://i.dummyjson.com/data/products/28/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/28/1.jpg",
@@ -896,6 +938,7 @@ export const products = [
     stock: 7,
     brand: "luxury palace",
     category: "home-decoration",
+    usedFor: 'home',
     thumbnail: "https://i.dummyjson.com/data/products/29/thumbnail.webp",
     images: [
       "https://i.dummyjson.com/data/products/29/1.jpg",
@@ -915,6 +958,7 @@ export const products = [
     stock: 54,
     brand: "Golden",
     category: "home-decoration",
+    usedFor: 'home',
     thumbnail: "https://i.dummyjson.com/data/products/30/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/30/1.jpg",
@@ -933,6 +977,7 @@ export const products = [
     stock: 140,
     brand: "Furniture Bed Set",
     category: "furniture",
+    usedFor: 'home',
     thumbnail: "https://i.dummyjson.com/data/products/31/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/31/1.jpg",
@@ -952,6 +997,7 @@ export const products = [
     stock: 30,
     brand: "Ratttan Outdoor",
     category: "furniture",
+    usedFor: 'home',
     thumbnail: "https://i.dummyjson.com/data/products/32/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/32/1.jpg",
@@ -970,6 +1016,7 @@ export const products = [
     stock: 106,
     brand: "Kitchen Shelf",
     category: "furniture",
+    usedFor: 'home',
     thumbnail: "https://i.dummyjson.com/data/products/33/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/33/1.jpg",
@@ -989,6 +1036,7 @@ export const products = [
     stock: 136,
     brand: "Multi Purpose",
     category: "furniture",
+    usedFor: 'home',
     thumbnail: "https://i.dummyjson.com/data/products/34/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/34/1.jpg",
@@ -1008,6 +1056,7 @@ export const products = [
     stock: 68,
     brand: "AmnaMart",
     category: "furniture",
+    usedFor: 'home',
     thumbnail: "https://i.dummyjson.com/data/products/35/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/35/1.jpg",
@@ -1027,6 +1076,7 @@ export const products = [
     stock: 39,
     brand: "Professional Wear",
     category: "tops",
+    usedFor: 'womens',
     thumbnail: "https://i.postimg.cc/rp72Z66X/red-top-1.jpg",
     images: [
       "https://i.postimg.cc/3rXQ1bnV/red-top-2.jpg",
@@ -1046,6 +1096,7 @@ export const products = [
     stock: 107,
     brand: "Soft Cotton",
     category: "tops",
+    usedFor: 'womens',
     thumbnail: "https://i.postimg.cc/sgpWgzcK/pink-top-1.jpg",
     images: [
       "https://i.postimg.cc/sgpWgzcK/pink-top-1.jpg",
@@ -1066,6 +1117,7 @@ export const products = [
     stock: 20,
     brand: "Soft Cotton",
     category: "tops",
+    usedFor: 'womens',
     thumbnail: "https://i.postimg.cc/T3jmQxBF/blue-top-1.jpg",
     images: [
       "https://i.postimg.cc/SKy9v5hs/blue-top-2.jpg",
@@ -1084,6 +1136,7 @@ export const products = [
     stock: 55,
     brand: "Top Sweater",
     category: "tops",
+    usedFor: 'womens',
     thumbnail: "https://i.postimg.cc/jdjtMYC2/orange-top-1.jpg",
     images: [
       "https://i.postimg.cc/jdjtMYC2/orange-top-1.jpg",
@@ -1103,6 +1156,7 @@ export const products = [
     stock: 84,
     brand: "Top Sweater",
     category: "tops",
+    usedFor: 'womens',
     thumbnail: "https://i.postimg.cc/VNmswrDs/yellow-top-1.jpg",
     images: [
       'https://i.postimg.cc/VNmswrDs/yellow-top-1.jpg',
@@ -1122,6 +1176,7 @@ export const products = [
     stock: 21,
     brand: "RED MICKY MOUSE..",
     category: "womens-saaree",
+    usedFor: 'womens',
     thumbnail: "https://i.postimg.cc/Kztd8Jzd/red-saaree-1.jpg",
     images: [
       'https://i.postimg.cc/Kztd8Jzd/red-saaree-1.jpg',
@@ -1142,6 +1197,7 @@ export const products = [
     stock: 148,
     brand: "Digital Printed",
     category: "womens-saaree",
+    usedFor: 'womens',
     thumbnail: "https://i.postimg.cc/wBp5dVCt/black-saaaree-5.jpg",
     images: [
       'https://i.postimg.cc/wBp5dVCt/black-saaaree-5.jpg',
@@ -1162,6 +1218,7 @@ export const products = [
     stock: 150,
     brand: "Ghazi Fabric",
     category: "womens-saaree",
+    usedFor: 'womens',
     thumbnail: "https://i.postimg.cc/dtR8vXY8/blue-saaree-1.jpg",
     images: [
       'https://i.postimg.cc/dtR8vXY8/blue-saaree-1.jpg',
@@ -1181,6 +1238,7 @@ export const products = [
     stock: 2,
     brand: "Ghazi Fabric",
     category: "womens-saaree",
+    usedFor: 'womens',
     thumbnail: "https://i.postimg.cc/bwy3BH0h/graan-saaree-1.jpg",
     images: [
       'https://i.postimg.cc/bwy3BH0h/graan-saaree-1.jpg', ,
@@ -1201,6 +1259,7 @@ export const products = [
     stock: 96,
     brand: "IELGY",
     category: "womens-saaree",
+    usedFor: 'womens',
     thumbnail: "https://i.postimg.cc/htS3qTHt/light-blue-saaree-1.jpg",
     images: [
       'https://i.postimg.cc/htS3qTHt/light-blue-saaree-1.jpg',
@@ -1220,6 +1279,7 @@ export const products = [
     stock: 72,
     brand: "IELGY fashion",
     category: "womens-shoes",
+    usedFor: 'womens',
     thumbnail: "https://i.dummyjson.com/data/products/46/1.webp",
     images: [
       "https://i.dummyjson.com/data/products/46/1.webp",
@@ -1239,6 +1299,7 @@ export const products = [
     stock: 50,
     brand: "Synthetic Leather",
     category: "womens-shoes",
+    usedFor: 'womens',
     thumbnail: "https://i.dummyjson.com/data/products/47/thumbnail.jpeg",
     images: [
       "https://i.dummyjson.com/data/products/47/1.jpg",
@@ -1257,6 +1318,7 @@ export const products = [
     stock: 25,
     brand: "Sandals Flip Flops",
     category: "womens-shoes",
+    usedFor: 'womens',
     thumbnail: "https://m.media-amazon.com/images/I/61GdGz90MhL._UY695_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/48/1.jpg",
@@ -1276,6 +1338,7 @@ export const products = [
     stock: 107,
     brand: "Maasai Sandals",
     category: "womens-shoes",
+    usedFor: 'womens',
     thumbnail: "https://i.dummyjson.com/data/products/49/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/49/1.jpg",
@@ -1294,6 +1357,7 @@ export const products = [
     stock: 46,
     brand: "Arrivals Genuine",
     category: "womens-shoes",
+    usedFor: 'womens',
     thumbnail: "https://m.media-amazon.com/images/I/61Y5dnHCkiL._UY695_.jpg",
     images: [
       "https://i.dummyjson.com/data/products/50/1.jpeg",
@@ -1311,6 +1375,7 @@ export const products = [
     stock: 132,
     brand: "Vintage Apparel",
     category: "mens-clothing",
+    usedFor: 'mens',
     thumbnail: "https://i.dummyjson.com/data/products/51/2.jpg",
     images: [
       "https://i.dummyjson.com/data/products/51/1.png",
@@ -1329,6 +1394,7 @@ export const products = [
     stock: 128,
     brand: "FREE FIRE",
     category: "mens-clothing",
+    usedFor: 'mens',
     thumbnail: "https://i.dummyjson.com/data/products/52/3.jpg",
     images: [
       "https://i.dummyjson.com/data/products/52/1.png",
@@ -1348,6 +1414,7 @@ export const products = [
     stock: 6,
     brand: "Vintage Apparel",
     category: "mens-clothing",
+    usedFor: 'mens',
     thumbnail: "https://i.dummyjson.com/data/products/53/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/53/1.webp",
@@ -1367,6 +1434,7 @@ export const products = [
     stock: 136,
     brand: "The Warehouse",
     category: "mens-clothing",
+    usedFor: 'mens',
     thumbnail: "https://i.dummyjson.com/data/products/54/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/54/1.jpg",
@@ -1386,6 +1454,7 @@ export const products = [
     stock: 122,
     brand: "The Warehouse",
     category: "mens-clothing",
+    usedFor: 'mens',
     thumbnail: "https://i.dummyjson.com/data/products/55/4.jpg",
     images: [
       "https://i.dummyjson.com/data/products/55/1.jpg",
@@ -1405,6 +1474,7 @@ export const products = [
     stock: 6,
     brand: "Sneakers",
     category: "mens-shoes",
+    usedFor: 'mens',
     thumbnail: "https://m.media-amazon.com/images/I/71VgSPTxPnL._UL1500_.jpg",
     images: [
       "https://cdn.shopify.com/s/files/1/2575/9828/products/2083ffa20fe76cf9cc4023261c9bddac_1904x.progressive_8a775a60-5ac4-40f9-a003-671c72800c3a_grande.jpg?v=1606494245",
@@ -1425,6 +1495,7 @@ export const products = [
     stock: 20,
     brand: "Rubber",
     category: "mens-shoes",
+    usedFor: 'mens',
     thumbnail: "https://5.imimg.com/data5/CY/QJ/MY-25539252/leather-shoes-for-men-leather-loafer-shoes-lo33-black-1000x1000.png",
     images: [
       "https://m.media-amazon.com/images/I/41upWLHyU-L.jpg",
@@ -1444,6 +1515,7 @@ export const products = [
     stock: 68,
     brand: "The Warehouse",
     category: "mens-shoes",
+    usedFor: 'mens',
     thumbnail: "https://i.dummyjson.com/data/products/58/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/58/1.jpg",
@@ -1463,6 +1535,7 @@ export const products = [
     stock: 137,
     brand: "Sneakers",
     category: "mens-shoes",
+    usedFor: 'mens',
     thumbnail: "https://i.dummyjson.com/data/products/59/3.jpg",
     images: [
       "https://i.dummyjson.com/data/products/59/1.jpg",
@@ -1482,6 +1555,7 @@ export const products = [
     stock: 129,
     brand: "Sneakers",
     category: "mens-shoes",
+    usedFor: 'mens',
     thumbnail: "https://i.dummyjson.com/data/products/60/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/60/1.jpg",
@@ -1500,6 +1574,7 @@ export const products = [
     stock: 91,
     brand: "Naviforce",
     category: "mens-watches",
+    usedFor: 'mens',
     thumbnail: "https://i.dummyjson.com/data/products/61/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/61/1.jpg",
@@ -1517,6 +1592,7 @@ export const products = [
     stock: 95,
     brand: "SKMEI 9117",
     category: "mens-watches",
+    usedFor: 'mens',
     thumbnail: "https://i.dummyjson.com/data/products/62/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/62/1.jpg",
@@ -1533,6 +1609,7 @@ export const products = [
     stock: 142,
     brand: "SKMEI 9117",
     category: "mens-watches",
+    usedFor: 'mens',
     thumbnail: "https://i.dummyjson.com/data/products/63/thumbnail.webp",
     images: [
       "https://i.dummyjson.com/data/products/63/1.jpg",
@@ -1551,6 +1628,7 @@ export const products = [
     stock: 61,
     brand: "Strap Skeleton",
     category: "mens-watches",
+    usedFor: 'mens',
     thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzKOX3svFY6fPNE1n2kXkBZfmtMhBdcNr0QXij5_tv0WvI5EDB3nnPcAWxKuSpKLhn8ez0YTzp8ho&usqp=CAU&ec=48665699",
     images: [
       "https://www.pngitem.com/pimgs/m/490-4909977_cartier-mens-watch-hd-png-download.png",
@@ -1569,6 +1647,7 @@ export const products = [
     stock: 94,
     brand: "Stainless",
     category: "mens-watches",
+    usedFor: 'mens',
     thumbnail: "https://i.dummyjson.com/data/products/65/thumbnail.webp",
     images: [
       "https://i.dummyjson.com/data/products/65/1.jpg",
@@ -1588,6 +1667,7 @@ export const products = [
     stock: 24,
     brand: "Eastern Watches",
     category: "womens-watches",
+    usedFor: 'womens',
     thumbnail: "https://i.dummyjson.com/data/products/66/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/66/1.jpg",
@@ -1607,6 +1687,7 @@ export const products = [
     stock: 46,
     brand: "Eastern Watches",
     category: "womens-watches",
+    usedFor: 'womens',
     thumbnail: "https://i.dummyjson.com/data/products/67/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/67/1.jpg",
@@ -1626,6 +1707,7 @@ export const products = [
     stock: 77,
     brand: "Luxury Digital",
     category: "womens-watches",
+    usedFor: 'womens',
     thumbnail: "https://i.dummyjson.com/data/products/68/thumbnail.webp",
     images: [
       "https://i.dummyjson.com/data/products/68/1.jpg",
@@ -1642,6 +1724,7 @@ export const products = [
     stock: 89,
     brand: "Watch Pearls",
     category: "womens-watches",
+    usedFor: 'womens',
     thumbnail: "https://i.dummyjson.com/data/products/69/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/69/1.jpg",
@@ -1661,6 +1744,7 @@ export const products = [
     stock: 111,
     brand: "Bracelet",
     category: "womens-watches",
+    usedFor: 'womens',
     thumbnail: "https://i.dummyjson.com/data/products/70/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/70/1.jpg",
@@ -1678,6 +1762,7 @@ export const products = [
     stock: 17,
     brand: "LouisWill",
     category: "girls-frock",
+    usedFor: 'womens',
     thumbnail: "https://i.dummyjson.com/data/products/71/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/71/1.jpg",
@@ -1696,6 +1781,7 @@ export const products = [
     stock: 27,
     brand: "LouisWill",
     category: "girls-frock",
+    usedFor: 'womens',
     thumbnail: "https://i.dummyjson.com/data/products/72/thumbnail.webp",
     images: [
       "https://i.dummyjson.com/data/products/72/1.jpg",
@@ -1715,6 +1801,7 @@ export const products = [
     stock: 101,
     brand: "Bracelet",
     category: "girls-frock",
+    usedFor: 'womens',
     thumbnail: "https://i.dummyjson.com/data/products/73/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/73/1.jpg",
@@ -1733,6 +1820,7 @@ export const products = [
     stock: 43,
     brand: "Copenhagen Luxe",
     category: "girls-frock",
+    usedFor: 'womens',
     thumbnail: "https://i.dummyjson.com/data/products/74/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/74/1.jpg",
@@ -1752,6 +1840,7 @@ export const products = [
     stock: 13,
     brand: "Steal Frame",
     category: "girls-frock",
+    usedFor: 'womens',
     thumbnail: "https://i.dummyjson.com/data/products/75/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/75/1.jpg",
@@ -1770,6 +1859,7 @@ export const products = [
     stock: 51,
     brand: "Darojay",
     category: "womens-jewellery",
+    usedFor: 'womens',
     thumbnail: "https://i.dummyjson.com/data/products/76/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/76/1.jpg",
@@ -1787,6 +1877,7 @@ export const products = [
     stock: 149,
     brand: "Copenhagen Luxe",
     category: "womens-jewellery",
+    usedFor: 'womens',
     thumbnail: "https://i.dummyjson.com/data/products/77/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/77/1.jpg",
@@ -1805,6 +1896,7 @@ export const products = [
     stock: 9,
     brand: "Fashion Jewellery",
     category: "womens-jewellery",
+    usedFor: 'womens',
     thumbnail: "https://i.dummyjson.com/data/products/78/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/78/thumbnail.jpg"
@@ -1820,6 +1912,7 @@ export const products = [
     stock: 16,
     brand: "Fashion Jewellery",
     category: "womens-jewellery",
+    usedFor: 'womens',
     thumbnail: "https://i.dummyjson.com/data/products/79/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/79/1.jpg"
@@ -1835,6 +1928,7 @@ export const products = [
     stock: 9,
     brand: "Cuff Butterfly",
     category: "womens-jewellery",
+    usedFor: 'womens',
     thumbnail: "https://i.dummyjson.com/data/products/80/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/80/1.jpg",
@@ -1854,6 +1948,7 @@ export const products = [
     stock: 78,
     brand: "Designer Sun Glasses",
     category: "sunglasses",
+    usedFor: 'beauty',
     thumbnail: "https://i.dummyjson.com/data/products/81/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/81/1.jpg",
@@ -1873,6 +1968,7 @@ export const products = [
     stock: 78,
     brand: "Designer Sun Glasses",
     category: "sunglasses",
+    usedFor: 'beauty',
     thumbnail: "https://i.dummyjson.com/data/products/82/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/82/1.jpg",
@@ -1892,6 +1988,7 @@ export const products = [
     stock: 115,
     brand: "mastar watch",
     category: "sunglasses",
+    usedFor: 'beauty',
     thumbnail: "https://i.dummyjson.com/data/products/83/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/83/1.jpg",
@@ -1911,6 +2008,7 @@ export const products = [
     stock: 64,
     brand: "mastar watch",
     category: "sunglasses",
+    usedFor: 'beauty',
     thumbnail: "https://i.dummyjson.com/data/products/84/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/84/1.jpg",
@@ -1928,199 +2026,12 @@ export const products = [
     stock: 92,
     brand: "LouisWill",
     category: "sunglasses",
+    usedFor: 'beauty',
     thumbnail: "https://i.dummyjson.com/data/products/85/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/85/1.jpg",
       "https://i.dummyjson.com/data/products/85/2.jpg",
       "https://i.dummyjson.com/data/products/85/thumbnail.jpg"
-    ]
-  },
-  {
-    _id: uuid(),
-    title: "Bluetooth Aux",
-    description: "Bluetooth Aux Bluetooth Car Aux Car Bluetooth Transmitter Aux Audio Receiver Handfree Car Bluetooth Music Receiver Universal 3.5mm Streaming A2DP Wireless Auto AUX Audio Adapter With Mic For Phone MP3",
-    price: 25,
-    discountPercentage: 10.56,
-    rating: 4.57,
-    stock: 22,
-    brand: "Car Aux",
-    category: "automotive",
-    thumbnail: "https://i.dummyjson.com/data/products/86/thumbnail.jpg",
-    images: [
-      "https://i.dummyjson.com/data/products/86/1.jpg",
-      "https://i.dummyjson.com/data/products/86/2.webp",
-      "https://i.dummyjson.com/data/products/86/3.jpg",
-      "https://i.dummyjson.com/data/products/86/4.jpg",
-      "https://i.dummyjson.com/data/products/86/thumbnail.jpg"
-    ]
-  },
-  {
-    _id: uuid(),
-    title: "t Temperature Controller Incubator Controller",
-    description: "Both Heat and Cool Purpose, Temperature control range; -50 to +110, Temperature measurement accuracy; 0.1, Control accuracy; 0.1",
-    price: 40,
-    discountPercentage: 11.3,
-    rating: 4.54,
-    stock: 37,
-    brand: "W1209 DC12V",
-    category: "automotive",
-    thumbnail: "https://i.dummyjson.com/data/products/87/thumbnail.jpg",
-    images: [
-      "https://i.dummyjson.com/data/products/87/1.jpg",
-      "https://i.dummyjson.com/data/products/87/2.jpg",
-      "https://i.dummyjson.com/data/products/87/3.jpg",
-      "https://i.dummyjson.com/data/products/87/4.jpg",
-      "https://i.dummyjson.com/data/products/87/thumbnail.jpg"
-    ]
-  },
-  {
-    _id: uuid(),
-    title: "TC Reusable Silicone Magic Washing Gloves",
-    description: "TC Reusable Silicone Magic Washing Gloves with Scrubber, Cleaning Brush Scrubber Gloves Heat Resistant Pair for Cleaning of Kitchen, Dishes, Vegetables and Fruits, Bathroom, Car Wash, Pet Care and Multipurpose",
-    price: 29,
-    discountPercentage: 3.19,
-    rating: 4.98,
-    stock: 42,
-    brand: "TC Reusable",
-    category: "automotive",
-    thumbnail: "https://i.dummyjson.com/data/products/88/thumbnail.jpg",
-    images: [
-      "https://i.dummyjson.com/data/products/88/1.jpg",
-      "https://i.dummyjson.com/data/products/88/2.jpg",
-      "https://i.dummyjson.com/data/products/88/3.jpg",
-      "https://i.dummyjson.com/data/products/88/4.webp",
-      "https://i.dummyjson.com/data/products/88/thumbnail.jpg"
-    ]
-  },
-  {
-    _id: uuid(),
-    title: "Qualcomm original Car Charger",
-    description: "best Quality CHarger , Highly Recommended to all best Quality CHarger , Highly Recommended to all",
-    price: 40,
-    discountPercentage: 17.53,
-    rating: 4.2,
-    stock: 79,
-    brand: "TC Reusable",
-    category: "automotive",
-    thumbnail: "https://i.dummyjson.com/data/products/89/thumbnail.jpg",
-    images: [
-      "https://i.dummyjson.com/data/products/89/1.jpg",
-      "https://i.dummyjson.com/data/products/89/2.jpg",
-      "https://i.dummyjson.com/data/products/89/3.jpg",
-      "https://i.dummyjson.com/data/products/89/4.jpg",
-      "https://i.dummyjson.com/data/products/89/thumbnail.jpg"
-    ]
-  },
-  {
-    _id: uuid(),
-    title: "Cycle Bike Glow",
-    description: "Universal fitment and easy to install no special wires, can be easily installed and removed. Fits most standard tyre air stem valves of road, mountain bicycles, motocycles and cars.Bright led will turn on w",
-    price: 35,
-    discountPercentage: 11.08,
-    rating: 4.1,
-    stock: 63,
-    brand: "Neon LED Light",
-    category: "automotive",
-    thumbnail: "https://i.dummyjson.com/data/products/90/thumbnail.jpg",
-    images: [
-      "https://i.dummyjson.com/data/products/90/1.jpg",
-      "https://i.dummyjson.com/data/products/90/2.jpg",
-      "https://i.dummyjson.com/data/products/90/3.jpg",
-      "https://i.dummyjson.com/data/products/90/4.jpg",
-      "https://i.dummyjson.com/data/products/90/thumbnail.jpg"
-    ]
-  },
-  {
-    _id: uuid(),
-    title: "Black Motorbike",
-    description: "Engine Type:Wet sump, Single Cylinder, Four Stroke, Two Valves, Air Cooled with SOHC (Single Over Head Cam) Chain Drive Bore & Stroke:47.0 x 49.5 MM",
-    price: 569,
-    discountPercentage: 13.63,
-    rating: 4.04,
-    stock: 115,
-    brand: "METRO 70cc Motorcycle - MR70",
-    category: "motorcycle",
-    thumbnail: "https://i.dummyjson.com/data/products/91/thumbnail.jpg",
-    images: [
-      "https://i.dummyjson.com/data/products/91/1.jpg",
-      "https://i.dummyjson.com/data/products/91/2.jpg",
-      "https://i.dummyjson.com/data/products/91/3.jpg",
-      "https://i.dummyjson.com/data/products/91/4.jpg",
-      "https://i.dummyjson.com/data/products/91/thumbnail.jpg"
-    ]
-  },
-  {
-    _id: uuid(),
-    title: "HOT SALE IN EUROPE electric racing motorcycle",
-    description: "HOT SALE IN EUROPE electric racing motorcycle electric motorcycle for sale adult electric motorcycles",
-    price: 920,
-    discountPercentage: 14.4,
-    rating: 4.19,
-    stock: 22,
-    brand: "BRAVE BULL",
-    category: "motorcycle",
-    thumbnail: "https://i.dummyjson.com/data/products/92/thumbnail.jpg",
-    images: [
-      "https://i.dummyjson.com/data/products/92/1.jpg",
-      "https://i.dummyjson.com/data/products/92/2.jpg",
-      "https://i.dummyjson.com/data/products/92/3.jpg",
-      "https://i.dummyjson.com/data/products/92/4.jpg"
-    ]
-  },
-  {
-    _id: uuid(),
-    title: "Automatic Motor Gas Motorcycles",
-    description: "150cc 4-Stroke Motorcycle Automatic Motor Gas Motorcycles Scooter motorcycles 150cc scooter",
-    price: 1050,
-    discountPercentage: 3.34,
-    rating: 4.84,
-    stock: 127,
-    brand: "shock absorber",
-    category: "motorcycle",
-    thumbnail: "https://i.dummyjson.com/data/products/93/thumbnail.jpg",
-    images: [
-      "https://i.dummyjson.com/data/products/93/1.jpg",
-      "https://i.dummyjson.com/data/products/93/2.jpg",
-      "https://i.dummyjson.com/data/products/93/3.jpg",
-      "https://i.dummyjson.com/data/products/93/4.jpg",
-      "https://i.dummyjson.com/data/products/93/thumbnail.jpg"
-    ]
-  },
-  {
-    _id: uuid(),
-    title: "new arrivals Fashion motocross goggles",
-    description: "new arrivals Fashion motocross goggles motorcycle motocross racing motorcycle",
-    price: 900,
-    discountPercentage: 3.85,
-    rating: 4.06,
-    stock: 109,
-    brand: "JIEPOLLY",
-    category: "motorcycle",
-    thumbnail: "https://i.dummyjson.com/data/products/94/thumbnail.webp",
-    images: [
-      "https://i.dummyjson.com/data/products/94/1.webp",
-      "https://i.dummyjson.com/data/products/94/2.jpg",
-      "https://i.dummyjson.com/data/products/94/3.jpg",
-      "https://i.dummyjson.com/data/products/94/thumbnail.webp"
-    ]
-  },
-  {
-    _id: uuid(),
-    title: "Wholesale cargo lashing Belt",
-    description: "Wholesale cargo lashing Belt Tie Down end Ratchet strap customized strap 25mm motorcycle 1500kgs with rubber handle",
-    price: 930,
-    discountPercentage: 17.67,
-    rating: 4.21,
-    stock: 144,
-    brand: "Xiangle",
-    category: "motorcycle",
-    thumbnail: "https://i.dummyjson.com/data/products/95/thumbnail.jpg",
-    images: [
-      "https://i.dummyjson.com/data/products/95/1.jpg",
-      "https://i.dummyjson.com/data/products/95/2.jpg",
-      "https://i.dummyjson.com/data/products/95/3.jpg",
-      "https://i.dummyjson.com/data/products/95/4.jpg",
-      "https://i.dummyjson.com/data/products/95/thumbnail.jpg"
     ]
   },
   {
@@ -2133,6 +2044,7 @@ export const products = [
     stock: 96,
     brand: "lightingbrilliance",
     category: "lighting",
+    usedFor: 'home',
     thumbnail: "https://i.dummyjson.com/data/products/96/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/96/1.jpg",
@@ -2152,6 +2064,7 @@ export const products = [
     stock: 146,
     brand: "Ifei Home",
     category: "lighting",
+    usedFor: 'home',
     thumbnail: "https://i.dummyjson.com/data/products/97/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/97/1.jpg",
@@ -2171,6 +2084,7 @@ export const products = [
     stock: 44,
     brand: "DADAWU",
     category: "lighting",
+    usedFor: 'home',
     thumbnail: "https://i.dummyjson.com/data/products/98/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/98/1.jpg",
@@ -2190,6 +2104,7 @@ export const products = [
     stock: 138,
     brand: "Ifei Home",
     category: "lighting",
+    usedFor: 'home',
     thumbnail: "https://i.dummyjson.com/data/products/99/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/99/1.jpg",
@@ -2209,6 +2124,7 @@ export const products = [
     stock: 133,
     brand: "YIOSI",
     category: "lighting",
+    usedFor: 'home',
     thumbnail: "https://i.dummyjson.com/data/products/100/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/100/1.jpg",

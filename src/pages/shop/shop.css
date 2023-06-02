@@ -39,7 +39,7 @@
 }
 
 .css-1to51ap-MuiBadge-root .MuiBadge-badge {
-    background-color: var(--tag-color);
+    background-color: var(--tag-color) !important;
 }
 
 .google button,

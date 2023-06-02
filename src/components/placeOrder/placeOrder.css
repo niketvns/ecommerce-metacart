@@ -19,6 +19,9 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 5px;
 }
 
 .place-order-main .product-details-shipping p{
