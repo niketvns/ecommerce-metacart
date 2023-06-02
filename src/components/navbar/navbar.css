@@ -50,7 +50,7 @@ nav .left input::placeholder {
 }
 
 nav .left .search,
-nav .left .search-2{
+nav .left .search-2 {
     position: relative;
 }
 
@@ -194,7 +194,7 @@ input::placeholder {
 }
 
 .categories ul li:hover,
-.categories a.active{
+.categories a.active {
     border: 1px solid white;
 }
 
@@ -203,10 +203,9 @@ input::placeholder {
     margin-left: 0px !important;
 }
 
-
-
-
-
+.MuiBadge-badge.MuiBadge-standard.MuiBadge-anchorOriginTopRight.MuiBadge-anchorOriginTopRightRectangular.MuiBadge-overlapRectangular.MuiBadge-colorSecondary.css-zhwrlg{
+    background-color: var(--tag-color) !important;
+}
 
 
 /* Media Query  */
@@ -235,7 +234,7 @@ input::placeholder {
 
 @media screen and (max-width: 500px) {
 
-    nav{
+    nav {
         height: auto;
     }
 
