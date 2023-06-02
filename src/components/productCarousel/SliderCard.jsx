@@ -21,7 +21,7 @@ const SliderCard = ({product}) => {
                         </div>
                         <div className="product-details">
                             <h3>{product.title}</h3>
-                            <p className='price'>${Math.floor(product.price)}/-</p>
+                            <p className='price'>&#8377;{Math.floor(product.price)}/-</p>
                             <p>{product.brand}</p>
                         </div>
                     </div>

@@ -7,6 +7,7 @@ const ProductProvider = ({children}) => {
     const [products, setProducts] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState();
+    const [myOrders, setMyOrders] = useState([])
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [selectedRating, setSelectedRating] = useState(0);
     const [sortByPrice, setSortByPrice] = useState('');
@@ -39,7 +40,7 @@ const ProductProvider = ({children}) => {
     const fetchProducts = async () => {
         try {
             let {data} = await axios.get(`/api/products`);
-                setProducts(data.products);
+            setProducts(data.products);
         } catch (err) {
             setError(err.message);
         } finally {
@@ -64,7 +65,9 @@ const ProductProvider = ({children}) => {
             selectedPrice,
             selectedCategories,
             selectedRating,
-            sortByPrice
+            sortByPrice,
+            myOrders,
+            setMyOrders
         }}>
             {children}
         </productContext.Provider>

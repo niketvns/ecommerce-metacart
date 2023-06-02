@@ -12,6 +12,7 @@
     font-size: 1.2rem;
     border: 1px solid;
     min-width: 300px;
+    max-width: 90%;
 }
 
 .my-account-main .account .tabs {
@@ -30,11 +31,11 @@
     text-align: center;
 }
 
-.my-account-main .account .tabs .active-tab{
+.my-account-main .account .tabs .active-tab {
     background-color: #0e529d;
 }
 
-.my-account-main .account .tabs div:hover{
+.my-account-main .account .tabs div:hover {
     background-color: #0e529d;
     transition: 0.3s;
 }
@@ -43,16 +44,15 @@
     padding: 20px;
 }
 
-.my-account-main .my-account-details div{
+.my-account-main .my-account-details div {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.my-account-main .my-account-details .details {
-
-}
-
-.my-account-main .my-account-details .details b {
-
+@media screen and (max-width: 350px) {
+    .my-account-main .account {
+        min-width: 80%;
+        max-width: 95%;
+    }
 }

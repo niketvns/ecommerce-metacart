@@ -9,7 +9,9 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 
 export default function Shop() {
     const [filterShow, setFilterShow] = useState(false)
-    const {isLoading, filteredProducts} = useGlobalProduct();
+    const {isLoading, filteredProducts, selectedPrice, selectedCategories,selectedRating,sortByPrice} = useGlobalProduct();
+
+    const noOfFilters = (selectedPrice !== 2000 ? 1 : 0) + (selectedCategories.length ? 1 : 0) + (selectedRating ? 1 : 0) + (sortByPrice ? 1 : 0)
 
     useEffect(() => {
         window.scrollTo({top: 0, left: 0});
@@ -20,7 +22,7 @@ export default function Shop() {
         !isLoading ?
             <div className='shop-main'>
                 <div className="filter-icon" onClick={() => setFilterShow(prev => !prev)}>
-                    <FilterListIcon/> Filter
+                    <FilterListIcon/> Filter ({noOfFilters})
                 </div>
                 <div className="product-filter-menu">
                     <Filter filterShow={filterShow}/>

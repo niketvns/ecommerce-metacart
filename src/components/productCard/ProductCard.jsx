@@ -28,7 +28,7 @@ export default function ProductCard({product}) {
                 </NavLink>
                 <h3>{product.title}</h3>
                 <div className="price-wishlist">
-                    <p className='price'>${Math.floor(product.price)}/-</p>
+                    <p className='price'>&#8377;{Math.floor(product.price)}/-</p>
                     <span onClick={() => wishlistArray.find(({id}) => id === product.id ) ? deleteFromWishlist(product._id) : addToWishlist(product)}>
                         <IconButton
                             aria-label="delete" id='wishlist-icon'

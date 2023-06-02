@@ -1,0 +1,51 @@
+.my-orders-main{
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 10px;
+    gap: 20px;
+}
+
+.my-orders-main .all-orders{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.my-orders-main .ind-order{
+    background-color: white;
+    padding: 20px;
+    box-shadow: 2px 2px 20px -8px rgba(0,0,0,0.6);
+    border-radius: 5px;
+    width: 90%;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.my-orders-main .ind-order .product-title{
+    color: var(--tag-color);
+}
+
+.my-orders-main .nothing-in-orders{
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.my-orders-main .nothing-in-orders h3{
+    color: rgba(0,0,0,0.4);
+}
+
+.my-orders-main .orders-login-main{
+    display: flex;
+    align-items: center;
+    height: 30vh;
+}

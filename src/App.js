@@ -21,7 +21,7 @@ import {
     Success,
     Wishlist,
     CustomerSupport,
-    Checkout
+    Checkout, MyOrders, PaymentHistory
 } from "./pages";
 
 function App() {
@@ -45,6 +45,8 @@ function App() {
                 <Route path='/user/profile' element={<Profile/>}/>
                 <Route path='/checkout' element={<Checkout/>}/>
                 <Route path='/success' element={<Success/>}/>
+                <Route path='/account/orders' element={<MyOrders/>}/>
+                <Route path='/account/payments' element={<PaymentHistory/>}/>
                 <Route path='/customer-support' element={<CustomerSupport/>}/>
                 <Route path='/testing/mockman' element={<Mockman/>}/>
                 <Route path='*' element={<Error/>}/>

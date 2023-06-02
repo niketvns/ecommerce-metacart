@@ -33,7 +33,7 @@ const CartItem = ({product}) => {
                         <AddIcon/>
                     </IconButton>
                 </div>
-                <p>Price: ${Math.floor(product.price * product.qty)}</p>
+                <p>Price: &#8377;{Math.floor(product.price * product.qty)}</p>
                 <div className="buttons">
                     <Button variant="contained" onClick={() => deleteFromCart(product._id)}>
                         Remove From Cart

@@ -37,29 +37,29 @@ const Filter = ({filterShow}) => {
             <div className="price-selector">
                 <h3>Price</h3>
                 <input type="range" min={0} max={2000} step="100" value={selectedPrice} onChange={(e)=>setSelectedPrice(e.target.value)} name={'priceRange'}/>
-                <p>Price &lt; ${selectedPrice}</p>
+                <p>Price &lt; &#8377;{selectedPrice}</p>
             </div>
             <div className="category-selector">
                 <h3>Categories</h3>
                 <div className="all-categories">
                     <label htmlFor="mens">
-                        <input type="checkbox" name={'category'} id='mens' value={'mens'} onChange={(e)=>handleCategoryChange(e.target.value, e.target.checked)}/>
+                        <input type="checkbox" name={'category'} id='mens' value={'mens'} checked={selectedCategories.includes('mens')} onChange={(e)=>handleCategoryChange(e.target.value, e.target.checked)}/>
                         Mens
                     </label>
                     <label htmlFor="womens">
-                        <input type="checkbox" name={'category'} id='womens' value={'womens'} onChange={(e)=>handleCategoryChange(e.target.value, e.target.checked)}/>
+                        <input type="checkbox" name={'category'} id='womens' value={'womens'} checked={selectedCategories.includes('womens')} onChange={(e)=>handleCategoryChange(e.target.value, e.target.checked)}/>
                         Womens
                     </label>
                     <label htmlFor="electronics">
-                        <input type="checkbox" name={'category'} id='electronics' value={'electronics'} onChange={(e)=>handleCategoryChange(e.target.value, e.target.checked)}/>
+                        <input type="checkbox" name={'category'} id='electronics' value={'electronics'} checked={selectedCategories.includes('electronics')} onChange={(e)=>handleCategoryChange(e.target.value, e.target.checked)}/>
                         Electronics
                     </label>
                     <label htmlFor="beauty">
-                        <input type="checkbox" name={'category'} id='beauty' value={'beauty'} onChange={(e)=>handleCategoryChange(e.target.value, e.target.checked)}/>
+                        <input type="checkbox" name={'category'} id='beauty' value={'beauty'} checked={selectedCategories.includes('beauty')} onChange={(e)=>handleCategoryChange(e.target.value, e.target.checked)}/>
                         Skincare
                     </label>
                     <label htmlFor="home-groceries">
-                        <input type="checkbox" name={'category'} id='home-groceries' value={'home'} onChange={(e)=>handleCategoryChange(e.target.value, e.target.checked)}/>
+                        <input type="checkbox" name={'category'} id='home-groceries' value={'home'} checked={selectedCategories.includes('home')} onChange={(e)=>handleCategoryChange(e.target.value, e.target.checked)}/>
                         Home Groceries
                     </label>
                 </div>

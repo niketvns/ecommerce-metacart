@@ -8,10 +8,7 @@ const Success = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-        setTimeout(() => {
-            navigate('/')
-        }, 6000)
+        window.scrollTo({ top: 0, left: 0 });
     }, [navigate])
 
     console.log(location);

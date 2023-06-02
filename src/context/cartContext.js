@@ -85,7 +85,8 @@ const CartProvider = ({children}) => {
             deleteFromCart,
             addToCart,
             calculateTotalPrice,
-            updateCart
+            updateCart,
+            setCartArray
         }}>
             {children}
         </cartContext.Provider>

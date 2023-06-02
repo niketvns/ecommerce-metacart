@@ -8,25 +8,6 @@ import { v4 as uuid } from "uuid";
 export const products = [
   {
     _id: uuid(),
-    title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-    price: 109.95,
-    description: "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-    discountPercentage: 6.18,
-    rating: 4.2,
-    stock: 3,
-    brand: "Raymond",
-    category: "mens-clothing",
-    usedFor: 'mens',
-    thumbnail: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-    images: [
-      "https://i.dummyjson.com/data/products/6/1.png",
-      "https://i.dummyjson.com/data/products/6/2.jpg",
-      "https://i.dummyjson.com/data/products/6/3.png",
-      "https://i.dummyjson.com/data/products/6/4.jpg"
-    ]
-  },
-  {
-    _id: uuid(),
     title: "Mens Casual Premium Slim Fit T-Shirts ",
     price: 22.3,
     description: "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
@@ -1241,12 +1222,11 @@ export const products = [
     usedFor: 'womens',
     thumbnail: "https://i.postimg.cc/bwy3BH0h/graan-saaree-1.jpg",
     images: [
-      'https://i.postimg.cc/bwy3BH0h/graan-saaree-1.jpg', ,
+      'https://i.postimg.cc/bwy3BH0h/graan-saaree-1.jpg',
       'https://i.postimg.cc/ZnzLFrYX/green-saaree-2.jpg',
       'https://i.postimg.cc/jj9c2ppx/green-saaree-3.jpg',
       'https://i.postimg.cc/wjw08yFs/green-saaree-4.jpg',
       'https://i.postimg.cc/k4bcbjCx/green-saaree-5.jpg'
-
     ]
   },
   {
@@ -1463,6 +1443,19 @@ export const products = [
       "https://i.dummyjson.com/data/products/55/4.jpg",
       "https://i.dummyjson.com/data/products/55/thumbnail.jpg"
     ]
+  },
+  {
+    _id: uuid(),
+    title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    price: 109.95,
+    description: "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    discountPercentage: 6.18,
+    rating: 4.2,
+    stock: 3,
+    brand: "Raymond",
+    category: "mens-clothing",
+    usedFor: 'mens',
+    thumbnail: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
   },
   {
     _id: uuid(),

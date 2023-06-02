@@ -36,17 +36,11 @@ export default function Menu({ menuFunction }) {
                         <div className="order-details">
                             <h2>Order</h2>
                             <ul>
-                                <NavLink to='order-summary' onClick={menuFunction}>
-                                    <li><ViewModuleIcon />Order Summary</li>
-                                </NavLink>
-                                <NavLink to='order-return' onClick={menuFunction}>
-                                    <li><AssignmentReturnIcon />Return</li>
-                                </NavLink>
-                                <NavLink to='my-order' onClick={menuFunction} >
+                                <NavLink to='/account/orders' onClick={menuFunction} >
                                     <li> <LocalMallIcon /> My Orders</li>
                                 </NavLink>
 
-                                <NavLink to='wishlist' onClick={menuFunction} >
+                                <NavLink to='/wishlist' onClick={menuFunction} >
                                     <li>
                                         <FavoriteBorderIcon /> My Wishlist
                                     </li>
@@ -57,11 +51,8 @@ export default function Menu({ menuFunction }) {
                         <div className="payments">
                             <h2>Payments</h2>
                             <ul>
-                                <NavLink to='payment-history' onClick={menuFunction} >
+                                <NavLink to='/account/payments' onClick={menuFunction} >
                                     <li> <PaymentIcon /> Payment History</li>
-                                </NavLink>
-                                <NavLink to='payment-refund' onClick={menuFunction} >
-                                    <li> <PaidIcon /> Payment Refund</li>
                                 </NavLink>
                             </ul>
                         </div>
@@ -71,7 +62,7 @@ export default function Menu({ menuFunction }) {
                                 <NavLink to='/user/profile' onClick={menuFunction}>
                                     <li><PersonIcon /> My Account</li>
                                 </NavLink>
-                                <NavLink to='customer-support' onClick={menuFunction} >
+                                <NavLink to='/customer-support' onClick={menuFunction} >
                                     <li><SupportAgentIcon /> Customer Suport</li>
                                 </NavLink>
                                 {

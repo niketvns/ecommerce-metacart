@@ -122,15 +122,15 @@ const SingleProduct = () => {
                                 <div className="price">
                                     <div className="buyPrice">
                                         <p className='discountedPercent'>-{Math.floor(productDetails?.discountPercentage)}%</p>
-                                        <p className='orgPrice'>${Math.floor(productDetails?.price)}/-</p>
+                                        <p className='orgPrice'>&#8377;{Math.floor(productDetails?.price)}/-</p>
                                     </div>
                                     <div className="mrp">
                                         MRP: <span
-                                        className='discounted'>${Math.floor(Number(productDetails?.price) + Number(productDetails?.discountPercentage))}/-</span>
+                                        className='discounted'>&#8377;{Math.floor(Number(productDetails?.price) + Number(productDetails?.discountPercentage))}/-</span>
                                     </div>
                                 </div>
                                 <p className='green'>You Save:
-                                    ${Math.floor((Number(productDetails?.price) + Number(productDetails?.discountPercentage)) - Number(productDetails?.price))}/-</p>
+                                    &#8377;{Math.floor((Number(productDetails?.price) + Number(productDetails?.discountPercentage)) - Number(productDetails?.price))}/-</p>
                                 <p className={stockClass}>{productDetails?.stock ? "In Stock" : "Out Of Stock"}</p>
                                 <div className="offers">
                                     <h3><img src={discountImg} alt="img"/> Offers</h3>
