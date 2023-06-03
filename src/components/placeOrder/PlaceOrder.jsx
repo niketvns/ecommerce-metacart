@@ -6,12 +6,14 @@ import {useGlobalAuth} from "../../context/authContext";
 import {useNotifyAlert} from "../../context/notifyAlert";
 import MetacartLogo from '../../images/logo.png'
 import {useGlobalProduct} from "../../context/productsContext";
+import {useNavigate} from "react-router-dom";
 
 const PlaceOrder = () => {
     const {calculateTotalPrice, cartArray, setCartArray} = useGlobalCart();
     const {userAddresses} = useGlobalAuth()
     const {notifyWarn, notifySuccess, notifyError} = useNotifyAlert()
     const {setMyOrders} = useGlobalProduct()
+    const navigate = useNavigate()
 
     const selectedAddress = userAddresses.find(({isSelected}) => isSelected === true)
 
@@ -33,14 +35,17 @@ const PlaceOrder = () => {
         const paymentTime = new Date().toDateString();
         cartArray.map(({_id, title, price, qty}) => setMyOrders(prev => [...prev, {
             id: _id,
+            customerName: selectedAddress.fullName,
             title: title,
             price: Math.floor(price),
             totalPrice: Math.floor(price) * qty,
+            totalPurchase: calculateTotalPrice() + 40,
             dataOfPurchase: paymentTime,
             quantity: qty,
             txnNo: payment.razorpay_payment_id,
             shippingAddress: `${selectedAddress.street}, ${selectedAddress.city}, ${selectedAddress.state}, ${selectedAddress.country}, ${selectedAddress.pinCode}`
         }]))
+        navigate('/order/success');
         setCartArray([])
     };
 

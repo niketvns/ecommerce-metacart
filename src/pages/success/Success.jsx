@@ -1,17 +1,19 @@
 import React, { useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import successImg from '../../images/success.png';
 import './success.css'
+import {useGlobalProduct} from "../../context/productsContext";
 
 const Success = () => {
-    const location = useLocation()
     const navigate = useNavigate()
+    const {myOrders} = useGlobalProduct()
 
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0 });
+        setTimeout(()=>{
+            navigate('/account/orders');
+        }, 6000)
     }, [navigate])
-
-    console.log(location);
 
     return (
         <>
@@ -19,12 +21,12 @@ const Success = () => {
                 <div className="succes-cont">
                     <span>Payment SuccessFull</span>
                     <img src={successImg} alt="success" />
-                    <span>Name: {location.state.purchase_units[0].shipping.name.full_name}</span>
-                    <span>Amount: {location.state.purchase_units[0].amount.value}
-                        {location.state.purchase_units[0].amount.currency_code}
+                    <span><b>Name:</b> {myOrders[0].customerName}</span>
+                    <span><b>Amount: &#8377;{myOrders[0].totalPurchase}</b>
                     </span>
-                    <span>ID: {location.state.id}</span>
-                    <span>Date: {location.state.create_time}</span>
+                    <span><b>Transaction Id:</b> {myOrders[0].txnNo}</span>
+                    <span><b>Date:</b> {myOrders[0].dataOfPurchase}</span>
+                    <span><b>Shipping Address:</b> {myOrders[0].shippingAddress}</span>
                 </div>
             </div>
         </>
