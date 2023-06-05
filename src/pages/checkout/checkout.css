@@ -45,7 +45,7 @@
 }
 
 .checkout-main .left .address .selected-icon *{
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: green;
 }
 
@@ -63,16 +63,18 @@
 
 .checkout-main .left .address-card-main .edit-address-icon *{
     font-size: 1.5rem;
-    color: green;
-    background-color: yellow;
+    color: white;
+    background-color: var(--tag-color);
     border-radius: 5px;
     padding: 2px;
 }
 
 .checkout-main .left .address-card-main .delete-address-icon *{
     font-size: 1.5rem;
-    color: red;
+    color: white;
+    background-color: red;
     padding: 2px;
+    border-radius: 5px;
     cursor: pointer;
 }
 

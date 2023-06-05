@@ -1,5 +1,6 @@
 import React from 'react';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
+import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import {useGlobalAuth} from "../../context/authContext";
@@ -15,7 +16,10 @@ const AddressCard = ({address, selectDeliveryAddress, index, setIsAddressModel})
                     address.isSelected ?
                         <div className="selected-icon">
                             <RadioButtonCheckedIcon/>
-                        </div> : null
+                        </div> :
+                        <div className="selected-icon">
+                            <RadioButtonUncheckedIcon/>
+                        </div>
                 }
 
                 <h3>{address?.fullName}</h3>
