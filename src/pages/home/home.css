@@ -30,7 +30,7 @@ body::-webkit-scrollbar-thumb{
 /*    padding: 20px 0px;*/
 /*}*/
 
-header img {
+header .header-carousel img {
     width: 100vw;
     height: 600px;
 }
@@ -85,10 +85,6 @@ header .best-deal .title-deal a:hover {
 
 
 /* Loader  */
-
-/* .best-deal-loader {
-    height: 150px;
-} */
 
 .best-deal-loader {
     width: 100vw;
@@ -208,62 +204,7 @@ header .best-deal .title-deal a:hover {
 }
 
 
-/* Categories  */
-
-.collections {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0px;
-    box-shadow: 2px 2px 20px -12px black;
-    padding-bottom: 20px;
-}
-
-.collections h2,
-.all-single-product h2 {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    margin: 10px 30px;
-    align-self: flex-start;
-
-}
-
-.all-collections {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.collections img {
-    width: 200px;
-    height: 250px;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 20px -8px black;
-    cursor: pointer;
-    object-fit: contain;
-}
-
-.category-offer {
-    position: relative;
-}
-
-.category-offer span {
-    position: absolute;
-    bottom: 20px;
-    left: 10px;
-    background-color: var(--tag-color);
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 1.1rem;
-}
+/*Product Carousel*/
 
 .best-offers {
     display: flex;
@@ -311,6 +252,8 @@ header .best-deal .title-deal a:hover {
     left: 4px;
     color: var(--tag-color);
 }
+
+/*Media Query*/
 
 @media screen and (max-width: 1400px) {
     .deal-items .swiper-pointer-events {
@@ -365,24 +308,9 @@ header .best-deal .title-deal a:hover {
         line-height: 30px;
         cursor: pointer;
     }
-
-    .collections img {
-        width: 200px;
-        height: 280px;
-        margin: 10px;
-        border-radius: 5px;
-        border: 2px solid var(--secondary-color);
-        cursor: pointer;
-    }
 }
 
 @media screen and (max-width: 500px) {
-
-    .collections img {
-        width: 150px;
-        height: 230px;
-    }
-
     .best-offers .items .item img {
         width: 150px;
         height: 200px;

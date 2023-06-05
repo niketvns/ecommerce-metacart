@@ -12,7 +12,7 @@ const PlaceOrder = () => {
     const {calculateTotalPrice, cartArray, setCartArray, deleteFromCart} = useGlobalCart();
     const {userAddresses} = useGlobalAuth()
     const {notifyWarn, notifySuccess, notifyError} = useNotifyAlert()
-    const {setMyOrders} = useGlobalProduct()
+    const {setMyOrders, setAllTransactions} = useGlobalProduct()
     const navigate = useNavigate()
 
     const selectedAddress = userAddresses.find(({isSelected}) => isSelected === true)
@@ -48,8 +48,14 @@ const PlaceOrder = () => {
                 shippingAddress: `${selectedAddress.street}, ${selectedAddress.city}, ${selectedAddress.state}, ${selectedAddress.country}, ${selectedAddress.pinCode}`
             }])
             //deleting the item from cart after purchasing
-            deleteFromCart(_id);
+            deleteFromCart(_id, 'no-notify');
         })
+        setAllTransactions(prev => [...prev, {
+            id: payment.razorpay_payment_id,
+            totalAmountPaid: calculateTotalPrice() + 40,
+            dataOfPurchase: paymentTime,
+            txnNo: payment.razorpay_payment_id,
+        }])
         navigate('/order/success');
     };
 

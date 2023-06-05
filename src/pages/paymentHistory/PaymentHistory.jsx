@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import {useGlobalAuth} from "../../context/authContext";
 
 const PaymentHistory = () => {
-    const {myOrders} = useGlobalProduct()
+    const {allTransactions} = useGlobalProduct()
     const {loginToken} = useGlobalAuth()
     const navigate = useNavigate()
 
@@ -22,13 +22,13 @@ const PaymentHistory = () => {
                     <>
                         <h2>Payment History</h2>
                         {
-                            myOrders.length ?
+                            allTransactions.length ?
                                 <div className="all-payments">
                                     {
-                                        myOrders.map(({totalPrice, txnNo, dataOfPurchase}) => (
+                                        allTransactions.map(({totalAmountPaid, txnNo, dataOfPurchase}) => (
                                             <div className={'ind-transaction'}>
                                                 <p><b>Transaction No:</b> {txnNo}</p>
-                                                <p><b>Amount:</b> &#8377;{totalPrice}</p>
+                                                <p><b>Amount:</b> &#8377;{totalAmountPaid}</p>
                                                 <p><b>Date:</b> {dataOfPurchase}</p>
                                             </div>
                                         ))

@@ -10,15 +10,4 @@
 
 .succes-cont img {
     width: 100px;
-    animation: greenTickAnimate 2s;
-}
-
-@keyframes greenTickAnimate {
-    0% {
-        width: 0px;
-    }
-
-    90% {
-        width: 100px;
-    }
 }

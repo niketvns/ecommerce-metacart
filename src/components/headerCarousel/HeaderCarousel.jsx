@@ -21,7 +21,7 @@ const HeaderCarousel = ({ images }) => {
                 }}
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper"
+                className="mySwiper header-carousel"
             >
                 {
                     images.map(({id, img}) => {

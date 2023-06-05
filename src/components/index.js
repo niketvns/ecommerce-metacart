@@ -1,6 +1,6 @@
 export {default as Navbar} from './navbar/Navbar'
 export {default as HeaderCarousel} from './headerCarousel/HeaderCarousel'
-export {default as Collection} from './topCategories/Collection'
+export {default as TopCollection} from './topCategories/TopCollection'
 export {default as SliderData} from './productCarousel/SliderData'
 export {default as Footer} from './footer/Footer'
 export {default as ProductDetails} from './productDetails/ProductDetails'

@@ -39,7 +39,6 @@ function App() {
                 <Route path='/wishlist' element={<Wishlist/>}/>
                 <Route path='/men' element={<Men/>}/>
                 <Route path='/women' element={<Women/>}/>
-                {/*<Route path='/tech' element={<Technology/>}/>*/}
                 <Route path='/beauty' element={<Beauty/>}/>
                 <Route path='/product/:id' element={<SingleProduct/>}/>
                 <Route path='/user/profile' element={<Profile/>}/>

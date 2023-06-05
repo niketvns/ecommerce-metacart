@@ -6,8 +6,9 @@ import {NavLink, useNavigate} from 'react-router-dom';
 import {useGlobalWishlist} from '../../context/wishlistContext';
 
 const SliderCard = ({product}) => {
-    const [heartColor, setHeartColor] = useState('#b6bfb8');
     const {wishlistArray, addToWishlist, deleteFromWishlist} = useGlobalWishlist();
+    const [isWishlistRedBtnDisable, setIsWishlistRedBtnDisable] = useState(false)
+    const [isWishlistBtnDisable, setIsWishlistBtnDisable] = useState(false)
 
     return (
         <>
@@ -27,16 +28,28 @@ const SliderCard = ({product}) => {
                     </div>
                 </NavLink>
                 {
-                    <div className="add-to-cart"
-                         onClick={() => wishlistArray.find(({_id}) => _id === product._id) ? deleteFromWishlist(product._id) : addToWishlist(product)}>
-                        <IconButton
-                            color="primary"
-                            aria-label="add to shopping cart"
-                        >
-                            <FavoriteIcon
-                                style={{color: wishlistArray.find(({_id}) => _id === product._id) ? "red" : heartColor}}
-                            />
-                        </IconButton>
+                    <div className="add-to-cart">
+                        {
+                            wishlistArray.find(({id}) => id === product.id) ?
+                                <IconButton
+                                    aria-label="delete" id='wishlist-icon'
+                                    onClick={()=> {
+                                        setIsWishlistBtnDisable(false)
+                                        deleteFromWishlist(product._id)
+                                    }}
+                                >
+                                    <FavoriteIcon style={{color: "red"}}/>
+                                </IconButton> :
+                                <IconButton
+                                    aria-label="delete" id='wishlist-icon' disabled={isWishlistBtnDisable}
+                                    onClick={()=> {
+                                        setIsWishlistBtnDisable(true)
+                                        addToWishlist(product)
+                                    }}
+                                >
+                                    <FavoriteIcon style={{color: "#b6bfb8"}}/>
+                                </IconButton>
+                        }
                     </div>
                 }
             </div>

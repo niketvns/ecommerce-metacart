@@ -1,6 +1,6 @@
 .go-to-top {
     background-color: var(--button-color);
-    padding: 0.4rem;
+    padding: 10px;
     cursor: pointer;
     position: fixed;
     right: 10px;

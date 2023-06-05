@@ -38,13 +38,13 @@ const CartProvider = ({children}) => {
         }
     }
 
-    const deleteFromCart = async (id) => {
+    const deleteFromCart = async (id, isNotifyShow) => {
         const encodedToken = localStorage.getItem('encodedToken')
         try {
             const {data} = await axios.delete(`/api/user/cart/${id}`, {
                 headers: {authorization: encodedToken}
             })
-            notifySuccess('Removed From Cart');
+            !isNotifyShow && notifySuccess('Removed From Cart');
             setCartArray(data.cart)
         } catch (err) {
             notifyError(err.message)

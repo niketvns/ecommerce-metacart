@@ -8,6 +8,7 @@ const ProductProvider = ({children}) => {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState();
     const [myOrders, setMyOrders] = useState([])
+    const [allTransactions, setAllTransactions] = useState([])
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [selectedRating, setSelectedRating] = useState(0);
     const [sortByPrice, setSortByPrice] = useState('');
@@ -67,7 +68,9 @@ const ProductProvider = ({children}) => {
             selectedRating,
             sortByPrice,
             myOrders,
-            setMyOrders
+            setMyOrders,
+            allTransactions,
+            setAllTransactions
         }}>
             {children}
         </productContext.Provider>

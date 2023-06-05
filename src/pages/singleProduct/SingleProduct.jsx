@@ -64,8 +64,9 @@ const SingleProduct = () => {
     useEffect(() => {
         setTimeout(() => {
             setIsWishlistBtnDisable(false)
+            setIsCartBtnDisable(false)
         }, 2000)
-    }, [isWishlistBtnDisable])
+    }, [isWishlistBtnDisable, isCartBtnDisable])
 
     return (
         !isLoading ?

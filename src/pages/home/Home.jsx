@@ -4,7 +4,7 @@ import header1 from '../../images/slider-img.png';
 import header2 from '../../images/ecommerce.jpg';
 import header3 from '../../images/ecommerce.png';
 import header4 from '../../images/slider-img2.jpg';
-import {HeaderCarousel, Collection, SliderData} from "../../components";
+import {HeaderCarousel, TopCollection, SliderData} from "../../components";
 import axios from "axios";
 import {v4 as uuid} from "uuid";
 
@@ -44,7 +44,7 @@ export default function Home() {
         <>
             <header>
                 <HeaderCarousel images={headerCarouselImages}/>
-                <Collection/>
+                <TopCollection/>
                 {
                     categories?.map(({_id, categoryName}) => (
                         <SliderData
