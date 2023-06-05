@@ -13,6 +13,9 @@ const Success = () => {
         setTimeout(()=>{
             navigate('/account/orders');
         }, 6000)
+        if(!myOrders.length){
+            navigate('/shop');
+        }
     }, [navigate])
 
     return (
@@ -21,12 +24,12 @@ const Success = () => {
                 <div className="succes-cont">
                     <span>Payment SuccessFull</span>
                     <img src={successImg} alt="success" />
-                    <span><b>Name:</b> {myOrders[0].customerName}</span>
-                    <span><b>Amount: &#8377;{myOrders[0].totalPurchase}</b>
+                    <span><b>Name:</b> {myOrders[0]?.customerName}</span>
+                    <span><b>Amount: &#8377;{myOrders[0]?.totalPurchase}</b>
                     </span>
-                    <span><b>Transaction Id:</b> {myOrders[0].txnNo}</span>
-                    <span><b>Date:</b> {myOrders[0].dataOfPurchase}</span>
-                    <span><b>Shipping Address:</b> {myOrders[0].shippingAddress}</span>
+                    <span><b>Transaction Id:</b> {myOrders[0]?.txnNo}</span>
+                    <span><b>Date:</b> {myOrders[0]?.dataOfPurchase}</span>
+                    <span><b>Shipping Address:</b> {myOrders[0]?.shippingAddress}</span>
                 </div>
             </div>
         </>

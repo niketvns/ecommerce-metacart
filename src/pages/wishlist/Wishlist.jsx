@@ -31,7 +31,7 @@ export default function Wishlist() {
                                 <img src={wishlist} alt="empty-wishlist" />
                                 <p>Nothing in the Wishlist</p>
                                 <Button type='submit' variant="contained" onClick={() => navigate('/shop')}>
-                                    Continue
+                                    Continue Shopping
                                 </Button>
                             </div>
                         </div>

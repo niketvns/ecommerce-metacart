@@ -23,7 +23,7 @@ const Profile = () => {
                     <div className="my-account-login">
                         <NavLink to='/login'>
                             <Button type='submit' variant="contained">
-                                Login to View
+                                Login to View Details
                             </Button>
                         </NavLink>
                     </div>

@@ -29,7 +29,7 @@ export default function Cart() {
                                 <img src={emptyCart} alt="empty-cart" />
                                 <p>Cart is Empty</p>
                                 <Button type='submit' variant="contained" onClick={() => navigate('/shop')}>
-                                    Continue
+                                    Continue Shopping
                                 </Button>
                             </div>
                         </div>
