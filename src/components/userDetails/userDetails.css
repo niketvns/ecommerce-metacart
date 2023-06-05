@@ -108,6 +108,7 @@
     .my-account-main .account-details .profile {
         min-width: 220px;
         width: 70vw;
+        position: static;
     }
 
     .my-account-main .account-details .address {
