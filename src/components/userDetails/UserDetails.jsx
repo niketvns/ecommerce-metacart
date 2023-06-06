@@ -37,7 +37,7 @@ const UserDetails = ({userDetails}) => {
                     {
                         userAddresses.length ?
                             userAddresses.map((address, ind) => (
-                                <div className={'ind-address-profile'}>
+                                <div className={'ind-address-profile'} key={`${ind}${address.pinCode}`}>
                                     <div className={'edit-address-icon'} onClick={()=>handleEditAddress(ind)}>
                                         <EditIcon/>
                                     </div>
