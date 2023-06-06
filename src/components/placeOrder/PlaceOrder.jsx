@@ -1,21 +1,21 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import './placeOrder.css'
 import Button from "@mui/material/Button";
-import {useGlobalCart} from "../../context/cartContext";
-import {useGlobalAuth} from "../../context/authContext";
-import {useNotifyAlert} from "../../context/notifyAlert";
+import { useGlobalCart } from "../../context/cartContext";
+import { useGlobalAuth } from "../../context/authContext";
+import { useNotifyAlert } from "../../context/notifyAlert";
 import MetacartLogo from '../../images/logo.png'
-import {useGlobalProduct} from "../../context/productsContext";
-import {useNavigate} from "react-router-dom";
+import { useGlobalProduct } from "../../context/productsContext";
+import { useNavigate } from "react-router-dom";
 
 const PlaceOrder = () => {
-    const {calculateTotalPrice, cartArray, setCartArray, deleteFromCart} = useGlobalCart();
-    const {userAddresses} = useGlobalAuth()
-    const {notifyWarn, notifySuccess, notifyError} = useNotifyAlert()
-    const {setMyOrders, setAllTransactions} = useGlobalProduct()
+    const { calculateTotalPrice, cartArray, setCartArray, deleteFromCart } = useGlobalCart();
+    const { userAddresses } = useGlobalAuth()
+    const { notifyWarn, notifySuccess, notifyError } = useNotifyAlert()
+    const { setMyOrders, setAllTransactions } = useGlobalProduct()
     const navigate = useNavigate()
 
-    const selectedAddress = userAddresses.find(({isSelected}) => isSelected === true)
+    const selectedAddress = userAddresses.find(({ isSelected }) => isSelected === true)
 
     useEffect(() => {
         const script = document.createElement("script");
@@ -34,7 +34,7 @@ const PlaceOrder = () => {
         notifySuccess(`Payment Successful: ${payment.razorpay_payment_id}`)
         notifySuccess('Order Placed Successfully!')
         const paymentTime = new Date().toDateString();
-        cartArray.map(({_id, title, price, qty}) => {
+        cartArray.map(({ _id, title, price, qty }) => {
             setMyOrders(prev => [...prev, {
                 id: _id,
                 customerName: selectedAddress.fullName,
@@ -71,7 +71,7 @@ const PlaceOrder = () => {
             return;
         }
         const options = {
-            key: "rzp_test_BTkuZZckCTVhWJ",
+            key: process.env.REACT_APP_RAZORPAY_KEY,
             amount: (calculateTotalPrice() + 40) * 100,
             currency: "INR",
             name: "MetaCartShop",
@@ -102,7 +102,7 @@ const PlaceOrder = () => {
                 <h2>Price Details</h2>
                 <div className="product-details-shipping">
                     {
-                        cartArray.map(({_id, title, price, qty}) => (
+                        cartArray.map(({ _id, title, price, qty }) => (
                             <div key={_id}>
                                 <p>{title}</p>
                                 <p>&#8377;{Math.floor(price)} x {qty}</p>
@@ -110,7 +110,7 @@ const PlaceOrder = () => {
                         ))
                     }
                 </div>
-                <hr/>
+                <hr />
                 <div className="subtotal">
                     <p>Subtotal</p>
                     <p>&#8377;{calculateTotalPrice()}</p>
@@ -123,7 +123,7 @@ const PlaceOrder = () => {
                     <p>Tax</p>
                     <p>&#8377;0</p>
                 </div>
-                <hr/>
+                <hr />
                 <div className="total">
                     <h3>Total</h3>
                     <p>&#8377;{calculateTotalPrice() + 40}</p>
