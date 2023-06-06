@@ -42,6 +42,7 @@ const UserDetails = ({userDetails}) => {
                                         <EditIcon/>
                                     </div>
                                     <p>Full Name: <b>{address.fullName}</b></p>
+                                    <p>Mobile: <b>{address.phone}</b></p>
                                     <p>House No: <b>{address.street}</b></p>
                                     <p>City: <b>{address.city}</b></p>
                                     <p>State: <b>{address.state}</b></p>

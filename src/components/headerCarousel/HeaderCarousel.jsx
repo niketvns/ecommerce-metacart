@@ -4,9 +4,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
+import './headerCarousel.css'
+import {useNavigate} from "react-router-dom";
 
 
 const HeaderCarousel = ({ images }) => {
+
+    const navigate = useNavigate()
+
     return (
         <>
             <Swiper
@@ -34,6 +39,7 @@ const HeaderCarousel = ({ images }) => {
                         )
                     })
                 }
+                <button className={'shop-now'} onClick={()=>navigate('/shop')}>Shop Now</button>
             </Swiper>
         </>
     )

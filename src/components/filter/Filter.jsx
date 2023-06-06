@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect} from 'react';
 import './filter.css'
 import Button from "@mui/material/Button";
 import {useGlobalProduct} from "../../context/productsContext";
@@ -12,6 +12,13 @@ const Filter = ({filterShow}) => {
         setSelectedRating(null);
         setSortByPrice('')
     }
+
+    useEffect(()=>{
+        // clear the filter on Unmount time
+        return () => {
+            clearFilter()
+        };
+    },[])
 
     function handleCategoryChange(category, checked) {
         let updatedCategories = [...selectedCategories];

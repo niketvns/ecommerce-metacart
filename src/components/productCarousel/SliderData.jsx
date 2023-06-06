@@ -48,7 +48,7 @@ const SliderData = ({title, category, all}) => {
             <div className="best-deal">
                 <div className="title-deal">
                     <h2>{title}</h2>
-                    <NavLink to='/shop'>{all}</NavLink>
+                    {/*<NavLink to='/shop'>{all}</NavLink>*/}
                 </div>
                 {
                     dealOfTheDay ?

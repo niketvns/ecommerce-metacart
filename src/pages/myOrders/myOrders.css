@@ -47,5 +47,17 @@
 .my-orders-main .orders-login-main{
     display: flex;
     align-items: center;
-    height: 30vh;
+    min-height: 30em;
+    width: 100%;
+    justify-content: center;
+    background-image: url('/src/images/orders.svg');
+    background-size: 70% 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media screen and (max-width: 500px) {
+    .my-orders-main{
+        min-height: 50vh;
+    }
 }

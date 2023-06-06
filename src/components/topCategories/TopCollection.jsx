@@ -5,14 +5,18 @@ import Formal from '../../images/formal-collection.png';
 import Tech from '../../images/tech-collection.png'
 import { NavLink } from 'react-router-dom';
 import './topCollections.css'
+import {useGlobalProduct} from "../../context/productsContext";
 
 const TopCollection = () => {
+
+    const {setSelectedCategories} = useGlobalProduct()
+
     return (
         <>
             <div className="collections">
                 <h2>Top Collections</h2>
                 <div className="all-collections">
-                    <NavLink to='/men' className={'ind-collection'}>
+                    <NavLink to='/shop' onClick={()=>setSelectedCategories(['mens'])} className={'ind-collection'}>
                         <div className="left">
                             <img src={Mens} alt=""/>
                         </div>
@@ -26,7 +30,7 @@ const TopCollection = () => {
                             </div>
                         </div>
                     </NavLink>
-                    <NavLink to='/women' className={'ind-collection'}>
+                    <NavLink to='/shop' onClick={()=>setSelectedCategories(['womens'])} className={'ind-collection'}>
                         <div className="left">
                             <img src={Womens} alt=""/>
                         </div>

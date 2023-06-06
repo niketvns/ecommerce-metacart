@@ -20,7 +20,7 @@ import {useGlobalWishlist} from '../../context/wishlistContext';
 import {useGlobalAuth} from "../../context/authContext";
 import {useNotifyAlert} from "../../context/notifyAlert";
 import SearchModel from "../searchModel/SearchModel";
-// import SearchModel from "../fullSearchModel/SearchModel";
+import {useGlobalProduct} from "../../context/productsContext";
 
 export default function Navbar() {
     const [showMenu, setShowMenu] = useState(false);
@@ -133,16 +133,16 @@ export default function Navbar() {
                     <NavLink to='/'>
                         <li><HomeIcon/></li>
                     </NavLink>
-                    <NavLink to='shop'>
+                    <NavLink to='/shop'>
                         <li>Shop</li>
                     </NavLink>
-                    <NavLink to='women'>
+                    <NavLink to='/products/womens'>
                         <li>Women</li>
                     </NavLink>
-                    <NavLink to='men'>
+                    <NavLink to='/products/mens'>
                         <li>Men</li>
                     </NavLink>
-                    <NavLink to='beauty'>
+                    <NavLink to='/products/beauty'>
                         <li>Beauty & Health</li>
                     </NavLink>
                 </ul>

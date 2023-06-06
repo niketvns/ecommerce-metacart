@@ -26,20 +26,6 @@ body::-webkit-scrollbar-thumb{
     background-color: var(--tag-color);
 }
 
-/*header {*/
-/*    padding: 20px 0px;*/
-/*}*/
-
-header .header-carousel img {
-    width: 100vw;
-    height: 600px;
-}
-
-.slider img {
-    width: 100vw !important;
-    height: 400px !important;
-}
-
 /* Best Deal  */
 
 header .best-deal {
@@ -100,7 +86,7 @@ header .best-deal .title-deal a:hover {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    width: 100vw;
+    width: 100%;
 }
 
 .deal-items a {

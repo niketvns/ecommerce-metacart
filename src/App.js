@@ -37,9 +37,9 @@ function App() {
                 <Route path='/shop' element={<Shop/>}/>
                 <Route path='/cart' element={<Cart/>}/>
                 <Route path='/wishlist' element={<Wishlist/>}/>
-                <Route path='/men' element={<Men/>}/>
-                <Route path='/women' element={<Women/>}/>
-                <Route path='/beauty' element={<Beauty/>}/>
+                <Route path='/products/mens' element={<Men/>}/>
+                <Route path='/products/womens' element={<Women/>}/>
+                <Route path='/products/beauty' element={<Beauty/>}/>
                 <Route path='/product/:id' element={<SingleProduct/>}/>
                 <Route path='/user/profile' element={<Profile/>}/>
                 <Route path='/checkout' element={<Checkout/>}/>

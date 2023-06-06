@@ -37,9 +37,7 @@ const SingleProduct = () => {
             let {data} = await axios.get(`/api/products/${id}`);
             setProductDetails(data?.product);
             setFullImg(data?.product?.thumbnail)
-            console.log(data)
         } catch (err) {
-            console.log(err)
             setError(err.message)
             notifyError(error.message);
         } finally {

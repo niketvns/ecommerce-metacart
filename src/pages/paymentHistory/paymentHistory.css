@@ -36,5 +36,17 @@
 .payment-history-main .payments-login-main{
     display: flex;
     align-items: center;
-    height: 30vh;
+    min-height: 30em;
+    width: 100%;
+    justify-content: center;
+    background-image: url('/src/images/payments.svg');
+    background-size: 70% 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media screen and (max-width: 500px) {
+    .payment-history-main{
+        min-height: 50vh;
+    }
 }

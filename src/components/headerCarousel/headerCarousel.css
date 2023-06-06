@@ -1,0 +1,39 @@
+/*header {*/
+/*    padding: 20px 0px;*/
+/*}*/
+
+header .header-carousel img {
+    width: 100vw;
+    height: 600px;
+}
+
+.slider img {
+    width: 100vw !important;
+    height: 400px !important;
+}
+
+.shop-now{
+    position: absolute;
+    bottom: 50px;
+    right: 10%;
+    z-index: 4;
+    background-color: var(--button-color);
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 4px 4px 25px -10px rgba(0,0,0,0.8);
+}
+
+.shop-now:hover{
+    background-color: var(--tag-color);
+    transition: 0.2s;
+}
+
+@media screen and (max-width: 600px) {
+    .slider img {
+        height: 300px !important;
+    }
+}
