@@ -98,7 +98,7 @@ Of course, no shop will serve all products since your needs may be different. So
 * [HTML](https://www.w3schools.com/html/)
 * [CSS](https://www.w3schools.com/css/)
 * [React.js](https://reactjs.org/)
-*[Mockbee](https://mockbee.netlify.app/)
+* [Mockbee](https://mockbee.netlify.app/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
